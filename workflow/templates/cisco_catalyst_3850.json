@@ -76,44 +76,17 @@
     {
       "name": "Confirm vlan.dat delete",
       "status": "Deleting vlan.dat",
-      "command": "y",
+      "command": "",
       "expect": "Switch#",
       "timeout": 20
-    },
-    {
-      "name": "Disable mode",
-      "status": "Exiting enable mode",
-      "command": "disable",
-      "expect": "Switch>",
-      "timeout": 10
-    },
-    {
-      "name": "Cleaning up inactive images",
-      "status": "Cleaning inactive images (IOS-XE)",
-      "command": "install remove inactive",
-      "expect": "Completed install remove",
-      "timeout": 60
-    },
-    {
-      "name": "Reloading",
-      "status": "Reloading switch",
-      "command": "reload",
-      "expect": "Proceed with reload.*confirm",
-      "timeout": 10
-    },
-    {
-      "name": "Confirming reload",
-      "status": "Reloading... (Wait for finish)",
-      "command": "",
-      "expect": "reboot",
-      "timeout": 30
     },
     {
       "name": "Workflow Complete",
       "status": "Successfully Finished",
       "command": null,
       "expect": null,
-      "timeout": 0
+      "timeout": 0,
+      "complete": true
     }
   ]
 }

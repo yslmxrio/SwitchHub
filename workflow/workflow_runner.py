@@ -80,19 +80,21 @@ def read_until(ser, expect_regex, timeout=30):
     log_output(f"[!] TIMEOUT waiting for: '{expect_regex}'")
     raise serial.SerialTimeoutException(f"Timeout waiting for '{expect_regex}'")
 
-def send_status(text, is_interactive=False):
+def send_status(text, is_interactive=False, is_completed=False):
     """
     Sends a structured JSON status to stdout.
     """
     status_payload = json.dumps({
         "text": text,
-        "interactive": is_interactive
+        "interactive": is_interactive,
+        "complete": is_completed,
     })
     print(f"{STATUS_FLAG}{status_payload}")
     sys.stdout.flush()
 
 def main(json_path, com_port):
     try:
+
         with open(json_path, 'r') as f:
             workflow = json.load(f)
     except Exception as e:
@@ -117,8 +119,9 @@ def main(json_path, com_port):
             expect_string = step.get('expect')
             timeout = step.get('timeout', 30)
 
-            # --- THIS IS THE NEW FLAG ---
+            # --- PHYSICAL INTERACTION FLAG ---
             is_interactive = step.get("require_physical_interact", False)
+            is_completed = step.get("is_completed", False)
 
             # Send the structured status
             send_status(status_message, is_interactive)

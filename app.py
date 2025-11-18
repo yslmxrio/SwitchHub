@@ -84,7 +84,7 @@ def run_workflow_on_port(workflow_path, com_port, q):
 
         if return_code == 0:
             q.put(("info", f"\n--- FINISHED {com_port}: SUCCESS ---"))
-            q.put(("status", {"text": "Successfully Finished", "interactive": False}))
+            q.put(("status", {"text": "Successfully Finished", "completed": True}))
         else:
             q.put(("info", f"\n--- FINISHED {com_port}: FAIL (Code {return_code}) ---"))
             q.put(("status", {"text": "Fatally Failed", "interactive": True}))
@@ -145,8 +145,32 @@ div[data-testid="stVerticalBlock"][style*="height: 400px"] {
   0%, 100% { background-color: transparent; color: #FFC107; }
   50% { background-color: #FFC107; color: #111; }
 }
+@keyframes flash-red {
+  0%, 100% {background-color: transparent; color: #DC3545; }
+  50% { background-color: #DC3545; color: #111; }
+}
+@keyframes flash-green {
+  0%, 100% {background-color: transparent; color: #28a745; }
+  50% { background-color: #28a745; color: #111; }
+}
 .status-interactive {
   animation: flash-yellow 1.5s infinite;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-weight: 700;
+  display: inline-block; /* Ensures background fits text */
+}
+.status-completed {
+  animation: flash-green 1.5s infinite;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-weight: 700;
+  display: inline-block; /* Ensures background fits text */
+}
+.status-failed {
+  color: #dc3545; !important
+  font-weight: 700;
+  animation: flash-red 1.5s infinite;
   padding: 2px 6px;
   border-radius: 4px;
   font-weight: 700;
@@ -213,17 +237,19 @@ if slit.session_state.outputs:
         # Default state
         status_text = "Idle"
         is_interactive = False
+        is_completed = False
 
         if isinstance(status_data, dict):
             status_text = status_data.get("text", "Idle")
             is_interactive = status_data.get("interactive", False)
+            is_completed = status_data.get("completed", True)
         elif status_data: # Fallback for old string
             status_text = str(status_data)
 
         # --- MODIFIED LOGIC ---
         # Prioritize red "Failed" status over flashing
         if status_text == "Fatally Failed":
-            return f'<p class="status-red">Err: {status_text}</p>'
+            return f'<p class="status-failed">Err: {status_text}</p>'
 
         # Check for flashing flag
         if is_interactive:
@@ -231,7 +257,7 @@ if slit.session_state.outputs:
 
         # Standard color logic
         if status_text == "Successfully Finished":
-            return f'<p class="status-green">Status: {status_text}</p>'
+            return f'<p class="status-green status-completed">Status: {status_text}</p>'
         elif status_text == "Idle" or status_text == "Starting...":
             return f'<p class="status-gray">Status: {status_text}</p>'
         else:
@@ -309,7 +335,7 @@ if slit.session_state.outputs:
 
                     # --- MODIFIED: Status display ---
                     # Get the status dict, or a default dict if none
-                    status_data = slit.session_state.port_status.get(port_name, {"text": "Idle", "interactive": False})
+                    status_data = slit.session_state.port_status.get(port_name, {"text": "Idle", "interactive": False, "completed": False})
                     slit.markdown(get_status_html(status_data), unsafe_allow_html=True)
 
                     current_assetid = slit.session_state.asset_ids.get(port_name, "")
@@ -357,7 +383,7 @@ if slit.session_state.outputs:
                                     del slit.session_state.pids[port_name]
                                 slit.session_state.outputs[port_key] = ""
                                 # --- MODIFIED: Set status as dict ---
-                                slit.session_state.port_status[port_name] = {"text": "Starting...", "interactive": False}
+                                slit.session_state.port_status[port_name] = {"text": "Starting...", "interactive": False, "completed": False}
                                 q = queue.Queue()
                                 slit.session_state.queues[port_name] = q
                                 thread = threading.Thread(
