@@ -1,0 +1,119 @@
+{
+  "name": "Cisco Catalyst 3850 (IOS-XE) Recovery (MODE)",
+  "description": "Destructive reset. Requires physical MODE button press. Bypasses config, wipes nvram, and cleans inactive images.",
+  "steps": [
+    {
+      "name": "Waiting for MODE button",
+      "status": "Waiting for user (Press MODE button)",
+      "require_physical_interact": true,
+      "command": null,
+      "expect": "switch:",
+      "timeout": 180
+    },
+    {
+      "name": "Initializing flash_init",
+      "status": "Initializing flash_init",
+      "command": "flash_init",
+      "expect": "....done Initializing Flash.",
+      "timeout": 30
+    },
+    {
+      "name":"Edit switch registry cfg",
+      "status": "Editing switch CFG",
+      "command": "SWITCH_IGNORE_STARTUP_CFG=1",
+      "expect": "switch:",
+      "timeout": 30
+    },
+    {
+      "name": "Booting",
+      "status": "Booting into bypass mode",
+      "command": "boot",
+      "expect": "Press RETURN to get started!",
+      "timeout": 600
+    },
+    {
+      "name": "Pressing RETURN",
+      "status": "Pressing RETURN",
+      "command": "",
+      "expect": "Switch>",
+      "timeout": 40
+    },
+    {
+      "name": "Entering Privileged Mode",
+      "status": "Entering Privileged Mode",
+      "command": "enable",
+      "expect": "Switch#",
+      "timeout": 10
+    },
+    {
+      "name": "Erasing startup-config (nvram)",
+      "status": "Erasing startup-config",
+      "command": "write erase",
+      "expect": "Erasing the nvram filesystem will remove all configuration files!.*confirm",
+      "timeout": 25
+    },
+    {
+      "name": "Confirming erase",
+      "status": "Erasing config",
+      "command": "",
+      "expect": "Erase of nvram: complete",
+      "timeout": 45
+    },
+    {
+      "name": "Deleting vlan.dat",
+      "status": "Deleting vlan.dat",
+      "command": "delete flash:vlan.dat",
+      "expect": "Delete filename.*",
+      "timeout": 20
+    },
+    {
+      "name": "Confirm file delete",
+      "status": "Deleting vlan.dat",
+      "command": "",
+      "expect": "Delete.*[confirm]",
+      "timeout": 20
+    },
+    {
+      "name": "Confirm vlan.dat delete",
+      "status": "Deleting vlan.dat",
+      "command": "y",
+      "expect": "Switch#",
+      "timeout": 20
+    },
+    {
+      "name": "Disable mode",
+      "status": "Exiting enable mode",
+      "command": "disable",
+      "expect": "Switch>",
+      "timeout": 10
+    },
+    {
+      "name": "Cleaning up inactive images",
+      "status": "Cleaning inactive images (IOS-XE)",
+      "command": "install remove inactive",
+      "expect": "Completed install remove",
+      "timeout": 60
+    },
+    {
+      "name": "Reloading",
+      "status": "Reloading switch",
+      "command": "reload",
+      "expect": "Proceed with reload.*confirm",
+      "timeout": 10
+    },
+    {
+      "name": "Confirming reload",
+      "status": "Reloading... (Wait for finish)",
+      "command": "",
+      "expect": "reboot",
+      "timeout": 30
+    },
+    {
+      "name": "Workflow Complete",
+      "status": "Successfully Finished",
+      "command": null,
+      "expect": null,
+      "timeout": 0
+    }
+  ]
+}
