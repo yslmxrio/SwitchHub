@@ -3,6 +3,8 @@ import time
 import sys
 import json
 import re
+import ctypes
+from ctypes import wintypes
 
 STATUS_FLAG = "STATUS_FLAG::"
 BAUD_RATE = 9600
@@ -24,14 +26,67 @@ def interrupt_and_read_until(ser, interrupt_char, expect_regex, timeout=120):
     buffer = ""
     start_time = time.time()
 
-    # --- MODIFIED LOOP LOGIC ---
-    while time.time() - start_time < timeout:
-        # 1. Write interrupt FIRST
-        ser.write(interrupt_char.encode('ascii'))
-        ser.flush()
+    #cycle = 0
+    try:
+        com_handle = ser._port_handle
+    except AttributeError:
+        log_output("Could not grab COM handle. Reverting to standard break.")
+        com_handle = None
 
-        # 2. Sleep (a shorter sleep is better for catching the window)
-        time.sleep(0.2)
+    if com_handle is None:
+        try:
+            com_handle = ser.hComPort
+        except AttributeError:
+            pass
+
+    # WITCH CRAFT DO NOT TOUCH
+    while time.time() - start_time < timeout:
+
+        if interrupt_char == "__BREAK__":
+            if com_handle:
+                ctypes.windll.kernel32.SetCommBreak(wintypes.HANDLE(com_handle))
+                time.sleep(0.25)
+                ctypes.windll.kernel32.ClearCommBreak(wintypes.HANDLE(com_handle))
+            else:
+                ser.send_break(duration=0.25)
+            ser.write(b'\x03\x1b\x00')
+            ser.flush()
+            print("![WIN_API_HYBRID]", file=sys.stderr, end='', flush=True)
+        else:
+            ser.write(interrupt_char.encode('ascii'))
+            ser.flush()
+
+        """ interrupt_char == "__BREAK__":
+            ser.send_break(duration=0.5)
+            print("!", file=sys.stderr, end='', flush=True)
+            if cycle % 4 == 0:
+                ser.break_condition = True
+                time.sleep(2.0)
+                ser.break_condition = False
+                print("![LONG]", file=sys.stderr, end='', flush=True)
+            elif cycle % 4 == 1:
+                ser.write(b'\x1b' * 10)
+                ser.flush()
+                print("![ESC]", file=sys.stderr, end='', flush=True)
+            elif cycle % 4 == 2:
+                ser.write(b'\x30' * 10)
+                ser.flush()
+                print("![^C]", file=sys.stderr, end='', flush=True)
+            elif cycle % 4 == 3:
+                ser.write(b'\x00' * 50)
+                ser.flush()
+                print("![NULL]", file=sys.stderr, end='', flush=True)
+                
+            cycle += 1
+
+            ser.baudrate = 300
+            ser.write(b'\x20' * 15)
+            ser.flush()
+            ser.baudrate = 9600
+            print("![300]", file=sys.stderr, end='', flush=True)"""
+
+
+        time.sleep(0.1)
 
         # 3. Read
         if ser.in_waiting > 0:
@@ -44,11 +99,11 @@ def interrupt_and_read_until(ser, interrupt_char, expect_regex, timeout=120):
 
                 # 4. Check if we found it
             if re.search(expect_regex, buffer, re.IGNORECASE | re.MULTILINE):
-                log_output(f"[.] Interrupt successful! Matched: '{expect_regex}'")
+                log_output(f"\n[.] Interrupt successful! Matched: '{expect_regex}'")
                 return buffer
     # --- END MODIFIED LOOP ---
 
-    log_output(f"[!] TIMEOUT waiting for: '{expect_regex}' after interrupt.")
+    log_output(f"\n[!] TIMEOUT waiting for: '{expect_regex}' after interrupt.")
     raise serial.SerialTimeoutException(f"Timeout waiting for '{expect_regex}' after interrupt")
 
 def read_until(ser, expect_regex, timeout=30):

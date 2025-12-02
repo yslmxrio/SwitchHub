@@ -1,0 +1,168 @@
+{
+  "name": "Cisco ME 3400 Series",
+  "description": "Destructive factory-reset.",
+  "steps": [
+    {
+      "name": "Send Break to interrupt boot",
+      "status": "Stopping autoboot (Sending Ctrl+Shift+6)",
+      "interrupt": "__BREAK__",
+      "expect": "switch:",
+      "timeout": 150
+    },
+    {
+      "name":"Initialize flash",
+      "status": "Initializing flash...",
+      "command": "flash_init",
+      "expect": "switch:",
+      "timeout": 60
+    },
+    {
+      "name": "Skip Startup-Config",
+      "status": "Skipping start-up configuration..",
+      "command": "SWITCH_IGNORE_STARTUP_CFG=1",
+      "expect": "switch:",
+      "timeout": 60
+    },
+    {
+      "name": "Print directory",
+      "status": "Printing directory...",
+      "command": "dir flash:",
+      "expect": "switch:",
+      "timeout": 20
+    },
+    {
+      "name": "Delete config text",
+      "status": "Deleting config.text file",
+      "command": "delete flash:/config.text",
+      "expect": "(y/n)",
+      "timeout": 60
+    },
+    {
+      "name": "Confirm config text delete prompt",
+      "status": "Confirming config.text delete",
+      "command": "y",
+      "expect": "switch:",
+      "timeout": 60
+    },
+    {
+      "name": "Delete private config text",
+      "status": "Deleting private-config.text file",
+      "command": "delete flash:/private-config.text",
+      "expect": "(y/n)",
+      "timeout": 60
+    },
+    {
+      "name": "Confirm private-config text delete prompt",
+      "status": "Confirming private-config.text delete",
+      "command": "y",
+      "expect": "switch:",
+      "timeout": 60
+    },
+    {
+      "name": "Delete vlan.dat",
+      "status": "Deleting flash:/vlan.dat",
+      "command": "delete flash:/vlan.dat",
+      "expect": "(y/n)",
+      "timeout": 60
+    },
+    {
+      "name": "Confirm vlan delete",
+      "status": "Confirming vlan.dat deletion..",
+      "command": "(y/n)",
+      "expect": "switch:",
+      "timeout": 60
+    },
+    {
+      "name": "Boot",
+      "status": "Booting system ...",
+      "command": "boot",
+      "expect": "[yes/no]: ",
+      "timeout": 180
+    },
+    {
+      "name": "Negate entering initial config dialog",
+      "status": "Negating initial config dialog...",
+      "command": "no",
+      "expect": "switch>",
+      "timeout": 60
+    },
+    {
+      "name": "Privileged mode",
+      "status": "Entering privileged mode..",
+      "command": "enable",
+      "expect": "switch#",
+      "timeout": 60
+    },
+    {
+      "name": "Erasing startup-config (nvram)",
+      "status": "Erasing startup-config",
+      "command": "write erase",
+      "expect": "Erasing the nvram filesystem will remove all configuration files!.*confirm",
+      "timeout": 25
+    },
+    {
+      "name": "Confirming erase",
+      "status": "Erasing config",
+      "command": "",
+      "expect": "Erase of nvram: complete",
+      "timeout": 45
+    },
+    {
+      "name": "Entering Tcl shell",
+      "status": "Cleaning flash (Tcl)",
+      "command": "tclsh",
+      "expect": "Switch\\(tcl\\)#",
+      "timeout": 10
+    },
+    {
+      "name": "Tcl: Starting loop",
+      "status": "Cleaning flash (Tcl)",
+      "command": "foreach f [glob flash:/*] { \\",
+      "expect": "\\+>",
+      "timeout": 10
+    },
+    {
+      "name": "Tcl: Setting vars",
+      "status": "Cleaning flash (Tcl)",
+      "command": "set fname [file tail $f]; set ext [file extension $f]; \\",
+      "expect": "\\+>",
+      "timeout": 10
+    },
+    {
+      "name": "Tcl: If block",
+      "status": "Cleaning flash (Tcl)",
+      "command": "if {[string match \"me340x*-mz.*\" $fname] || [string match \"me340x*\" $fname] || [string match \".bin*\" $ext] || [string match \".S*.bin\" $ext] || [string match \".S*\" $ext] || ([string match \"package*\" $fname] && [string match \".conf\" $ext])} { \\",
+      "expect": "\\+>",
+      "timeout": 10
+    },
+    {
+      "name": "Tcl: Skip logic",
+      "status": "Cleaning flash (Tcl)",
+      "command": "puts \"Skipping possible IOS image: $fname\"; continue }; \\",
+      "expect": "\\+>",
+      "timeout": 10
+    },
+    {
+      "name": "Tcl: Delete logic",
+      "status": "Cleaning flash (Tcl)",
+      "command": "puts \"Deleting file/dir: $fname\"; exec delete /force /recursive $f }",
+      "expect": "Switch\\(tcl\\)#",
+      "timeout": 120
+    },
+    {
+      "name": "Exiting Tcl shell",
+      "status": "Finalizing cleanup",
+      "command": "tclquit",
+      "expect": "Switch#",
+      "timeout": 10
+    },
+    {
+      "name": "Workflow Complete",
+      "status": "Successfully Finished",
+      "command": null,
+      "expect": null,
+      "timeout": 0,
+      "complete": true
+    }
+  ]
+}

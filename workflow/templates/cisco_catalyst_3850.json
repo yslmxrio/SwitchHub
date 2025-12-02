@@ -81,6 +81,62 @@
       "timeout": 20
     },
     {
+      "name": "Entering Privileged Mode",
+      "status": "Finalizing setup",
+      "command": "enable",
+      "expect": "Switch#",
+      "timeout": 10
+    },
+    {
+      "name": "Entering Tcl shell",
+      "status": "Cleaning flash (Tcl)",
+      "command": "tclsh",
+      "expect": "Switch\\(tcl\\)#",
+      "timeout": 10
+    },
+    {
+      "name": "Tcl: Starting loop",
+      "status": "Cleaning flash (Tcl)",
+      "command": "foreach f [glob flash:/*] { \\",
+      "expect": "\\+>",
+      "timeout": 10
+    },
+    {
+      "name": "Tcl: Setting vars",
+      "status": "Cleaning flash (Tcl)",
+      "command": "set fname [file tail $f]; set ext [file extension $f]; \\",
+      "expect": "\\+>",
+      "timeout": 10
+    },
+    {
+      "name": "Tcl: If block",
+      "status": "Cleaning flash (Tcl)",
+      "command": "if {[string match \"c*universal*\" $fname] || [string match \"cat*universal*\" $fname] || [string match \".E*\" $ext] || [string match \"cat\" $fname] || [string match \".pkg\" $ext] || ([string match \"package*\" $fname] && [string match \".conf\" $ext])} { \\",
+      "expect": "\\+>",
+      "timeout": 10
+    },
+    {
+      "name": "Tcl: Skip logic",
+      "status": "Cleaning flash (Tcl)",
+      "command": "puts \"Skipping possible IOS image: $fname\"; continue }; \\",
+      "expect": "\\+>",
+      "timeout": 10
+    },
+    {
+      "name": "Tcl: Delete logic",
+      "status": "Cleaning flash (Tcl)",
+      "command": "puts \"Deleting file/dir: $fname\"; exec delete /force /recursive $f }",
+      "expect": "Switch\\(tcl\\)#",
+      "timeout": 120
+    },
+    {
+      "name": "Exiting Tcl shell",
+      "status": "Finalizing cleanup",
+      "command": "tclquit",
+      "expect": "Switch#",
+      "timeout": 10
+    },
+    {
       "name": "Workflow Complete",
       "status": "Successfully Finished",
       "command": null,

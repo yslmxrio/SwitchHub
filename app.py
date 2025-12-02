@@ -10,7 +10,7 @@ import queue
 from datetime import datetime
 import os
 import signal
-import json # <-- Import JSON
+import json
 
 # Define BAUD_RATE globally
 BAUD_RATE = 9600
