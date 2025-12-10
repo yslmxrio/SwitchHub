@@ -1,0 +1,49 @@
+{
+  "name": "Aruba AccessPoint 535",
+  "description": "Destructive factory-reset.",
+  "steps": [
+    {
+      "name": "Stop autoboot",
+      "status": "Stopping autoboot",
+      "interrupt": "\r",
+      "expect": "apboot>",
+      "timeout": 150
+    },
+    {
+      "name":"Purge environment",
+      "status": "Purging environment",
+      "command": "purge",
+      "expect": "apboot>",
+      "timeout": 60
+    },
+    {
+      "name": "Save clean config",
+      "status": "Saving clean-slate environment",
+      "command": "save",
+      "expect": "apboot>",
+      "timeout": 60
+    },
+    {
+      "name": "RFD",
+      "status": "Resetting to factory defaults",
+      "command": "factory_reset",
+      "expect": "apboot>",
+      "timeout": 60
+    },
+    {
+      "name": "Reset",
+      "status": "Finalizing Reset..",
+      "command": "reset",
+      "expect": "APBoot",
+      "timeout": 60
+    },
+    {
+      "name": "Workflow Complete",
+      "status": "Successfully Finished",
+      "command": null,
+      "expect": null,
+      "timeout": 0,
+      "complete": true
+    }
+  ]
+}

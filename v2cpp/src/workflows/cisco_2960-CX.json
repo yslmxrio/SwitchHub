@@ -1,20 +1,21 @@
 {
-  "name": "Cisco ME 3400 Series",
-  "description": "Destructive factory-reset.",
+  "name": "Cisco 2960x/3750x Factory Reset (MODE)",
+  "description": "Full destructive reset. Wipes config, vlan.dat, and cleans flash. Requires physical MODE button press.",
   "steps": [
     {
-      "name": "Send Break to interrupt boot",
-      "status": "Waiting for 'autoboot' prompt to fire Break...",
-      "interrupt": "__BREAK__",
+      "name": "Waiting for MODE button",
+      "status": "Waiting for user (Press MODE button)",
+      "require_physical_interact": true,
+      "command": null,
       "expect": "switch:",
-      "timeout": 180
+      "timeout": 240
     },
     {
-      "name":"Initialize flash",
-      "status": "Initializing flash...",
+      "name": "Initializing Flash",
+      "status": "Initializing Flash",
       "command": "flash_init",
       "expect": "switch:",
-      "timeout": 60
+      "timeout": 30
     },
     {
       "name": "Skip Startup-Config",
@@ -24,74 +25,73 @@
       "timeout": 60
     },
     {
-      "name": "Print directory",
-      "status": "Printing directory...",
-      "command": "dir flash:",
-      "expect": "switch:",
-      "timeout": 20
-    },
-    {
-      "name": "Delete config text",
-      "status": "Deleting config.text file",
+      "name": "Deleting config.text",
+      "status": "Deleting config.text",
       "command": "delete flash:/config.text",
       "expect": "(y/n)",
-      "timeout": 60
+      "timeout": 10
     },
     {
-      "name": "Confirm config text delete prompt",
-      "status": "Confirming config.text delete",
+      "name": "Confirming config.text delete",
+      "status": "Confirming delete",
       "command": "y",
       "expect": "switch:",
-      "timeout": 60
+      "timeout": 10
     },
     {
-      "name": "Delete private config text",
-      "status": "Deleting private-config.text file",
+      "name": "Deleting private-config.text",
+      "status": "Deleting private-config.text",
       "command": "delete flash:/private-config.text",
       "expect": "(y/n)",
-      "timeout": 60
+      "timeout": 10
     },
     {
-      "name": "Confirm private-config text delete prompt",
-      "status": "Confirming private-config.text delete",
+      "name": "Confirming private-config delete",
+      "status": "Confirming delete",
       "command": "y",
       "expect": "switch:",
-      "timeout": 60
+      "timeout": 10
     },
     {
-      "name": "Delete vlan.dat",
-      "status": "Deleting flash:/vlan.dat",
+      "name": "Deleting vlan.dat",
+      "status": "Deleting vlan.dat",
       "command": "delete flash:/vlan.dat",
       "expect": "(y/n)",
-      "timeout": 60
+      "timeout": 10
     },
     {
-      "name": "Confirm vlan delete",
-      "status": "Confirming vlan.dat deletion..",
-      "command": "(y/n)",
+      "name": "Confirming vlan.dat delete",
+      "status": "Confirming delete",
+      "command": "y",
       "expect": "switch:",
-      "timeout": 60
+      "timeout": 10
     },
     {
-      "name": "Boot",
-      "status": "Booting system ...",
+      "name": "Rebooting switch",
+      "status": "Rebooting (this may take 5 min)",
       "command": "boot",
-      "expect": "[yes/no]: ",
-      "timeout": 180
+      "expect": "RETURN to get started!",
+      "timeout": 300
     },
     {
-      "name": "Negate entering initial config dialog",
-      "status": "Negating initial config dialog...",
+      "name": "Initializing RETURN to get started input",
+      "status": "RETURNING...",
+      "command": "\r",
+      "expect":"(Would you like to enter the initial configuration dialog|Switch>)"
+    },
+    {
+      "name": "Exiting initial config",
+      "status": "Finalizing setup",
       "command": "no",
-      "expect": "switch>",
+      "expect": "Switch>",
       "timeout": 60
     },
     {
-      "name": "Privileged mode",
-      "status": "Entering privileged mode..",
+      "name": "Entering Privileged Mode",
+      "status": "Finalizing setup",
       "command": "enable",
-      "expect": "switch#",
-      "timeout": 60
+      "expect": "Switch#",
+      "timeout": 10
     },
     {
       "name": "Erasing startup-config (nvram)",
@@ -131,7 +131,7 @@
     {
       "name": "Tcl: If block",
       "status": "Cleaning flash (Tcl)",
-      "command": "if {[string match \"me340x*-mz.*\" $fname] || [string match \"me340x*\" $fname] || [string match \".bin*\" $ext] || [string match \".S*.bin\" $ext] || [string match \".S*\" $ext] || ([string match \"package*\" $fname] && [string match \".conf\" $ext])} { \\",
+      "command": "if {[string match \"c*universal*\" $fname] || [string match \"cat*universal*\" $fname] || [string match \".E*\" $ext] || ([string match \"package*\" $fname] && [string match \".conf\" $ext])} { \\",
       "expect": "\\+>",
       "timeout": 10
     },
@@ -161,8 +161,7 @@
       "status": "Successfully Finished",
       "command": null,
       "expect": null,
-      "timeout": 0,
-      "complete": true
+      "timeout": 0
     }
   ]
 }
