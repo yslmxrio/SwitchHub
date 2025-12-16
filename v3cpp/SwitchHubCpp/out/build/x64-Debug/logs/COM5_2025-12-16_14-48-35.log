@@ -1,0 +1,16 @@
+=================================================
+SwitchHub Workflow Log
+=================================================
+Port:      COM5
+Asset ID:  (not set)
+Workflow:  Baud Detection
+Started:   2025-12-16 14:48:35
+=================================================
+
+[AUTO-BAUD] Scanning signal (Hardware Framing Check)...
+[AUTO-BAUD] Timeout. No valid signal found. Defaulting to 9600.
+
+=================================================
+Workflow Ended: 2025-12-16 14:48:52
+Status: INCOMPLETE
+=================================================

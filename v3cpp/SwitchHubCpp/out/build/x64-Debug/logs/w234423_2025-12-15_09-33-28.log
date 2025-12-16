@@ -1,0 +1,59 @@
+=================================================
+SwitchHub Workflow Log
+=================================================
+Port:      COM5
+Asset ID:  w234423
+Workflow:  Cisco 2960x/3750x Factory Reset (MODE)
+Started:   2025-12-15 09:33:28
+=================================================
+
+[SYSTEM] Workflow 'Cisco 2960x/3750x Factory Reset (MODE)' started on COM5 @ 9600 baud
+Image passed digital signature verification
+Board rev: 18
+Testing DataBus...
+Testing AddressBus...
+Testing Memory from 0x00000000 to 0x1fffffff...  - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / 
+Using driver version 4 for media type 1
+Xmodem file system is available.
+Base ethernet MAC Address: 68:99:cd:01:6f:00
+The password-recovery mechanism is enabled.
+APM USBUSB EHCI 1.00
+USB EHCI 1.00
+USB Console INIT
+Initializing Flash...
+mifs[5]: 12 files, 1 directories
+mifs[5]: Total bytes     :    1806336
+mifs[5]: Bytes used      :     833536
+mifs[5]: Bytes available :     972800
+mifs[5]: mifs fsck took 1 seconds.
+mifs[6]: 1 files, 1 directories
+mifs[6]: Total bytes     :    3870720
+mifs[6]: Bytes used      :     971264
+mifs[6]: Bytes available :    2899456
+mifs[6]: mifs fsck took 1 seconds.
+mifs[7]: 5 files, 1 directories
+mifs[7]: Total bytes     :     258048
+mifs[7]: Bytes used      :       8192
+mifs[7]: Bytes available :     249856
+mifs[7]: mifs fsck took 0 seconds.
+mifs[8]: 5 files, 1 directories
+mifs[8]: Total bytes     :     258048
+mifs[8]: Bytes used      :       8192
+mifs[8]: Bytes available :     249856
+mifs[8]: mifs fsck took 0 seconds.
+mifs[9]: filesystem check interrupted!
+...done Initializing Flash.
+
+The system has been interrupted, or encountered an error
+during initialization of the flash filesystem.  The following
+commands will initialize the flash filesystem, and finish
+loading the operating system software:
+
+    flash_init
+    boot
+
+
+switch: [TX] flash_init
+flash_init
+Initializing Flash...
+

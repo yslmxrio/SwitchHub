@@ -1,0 +1,61 @@
+=================================================
+SwitchHub Workflow Log
+=================================================
+Port:      COM5
+Asset ID:  (not set)
+Workflow:  Cisco 2960x/3750x Factory Reset (MODE)
+Started:   2025-12-16 10:46:31
+=================================================
+
+[AUTO-BAUD] Scanning for signal (20s timeout)...
+[AUTO-BAUD] Please plug in or reboot the device now.
+[AUTO-BAUD] MATCH! Detected: 115200
+[SYSTEM] Workflow 'Cisco 2960x/3750x Factory Reset (MODE)' started on COM5 @ 115200 baud
+mifs[7]: 12 files, 1 directories
+mifs[7]: Total bytes     : 1806336   
+mifs[7]: Bytes used      : 833536    
+mifs[7]: Bytes available : 972800    
+mifs[7]: mifs fsck took 0 seconds.
+mifs[7]: Initialization complete.
+
+mifs[8]: 0 files, 1 directories
+mifs[8]: Total bytes     : 3870720   
+mifs[8]: Bytes used      : 1024      
+mifs[8]: Bytes available : 3869696   
+mifs[8]: mifs fsck took 0 seconds.
+mifs[8]: Initialization complete.
+
+mifs[9]: 5 files, 1 directories
+mifs[9]: Total bytes     : 258048    
+mifs[9]: Bytes used      : 8192      
+mifs[9]: Bytes available : 249856    
+mifs[9]: mifs fsck took 0 seconds.
+mifs[9]: Initialization complete.
+
+mifs[10]: 5 files, 1 directories
+mifs[10]: Total bytes     : 258048    
+mifs[10]: Bytes used      : 8192      
+mifs[10]: Bytes available : 249856    
+mifs[10]: mifs fsck took 0 seconds.
+mifs[10]: Initialization complete.
+
+mifs[11]: 6 files, 2 directories
+mifs[11]: Total bytes     : 122185728 
+mifs[11]: Bytes used      : 27062784  
+mifs[11]: Bytes available : 95122944  
+mifs[11]: mifs fsck took 0 seconds.
+mifs[11]: Initialization complete.
+
+...done Initializing flashfs.
+Checking for Bootloader upgrade..
+Boot Loader upgrade not needed(v)
+
+
+FIPS: Flash Key Check : Begin
+FIPS: Flash Key Check : End, Not Found, FIPS Mode Not Enabled
+[SYSTEM] Workflow interrupted by user
+
+=================================================
+Workflow Ended: 2025-12-16 10:46:56
+Status: INTERRUPTED BY USER
+=================================================

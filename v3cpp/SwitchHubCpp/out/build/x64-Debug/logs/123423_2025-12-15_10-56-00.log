@@ -1,0 +1,73 @@
+=================================================
+SwitchHub Workflow Log
+=================================================
+Port:      COM3
+Asset ID:  123423
+Workflow:  Cisco 2960X Initial Setup (with Fallback)
+Started:   2025-12-15 10:56:00
+=================================================
+
+[AUTO-BAUD] Starting automatic baud rate detection...
+[AUTO-BAUD] Testing rates: 9600, 115200, 19200, 38400, 57600, 2400, 4800
+[AUTO-BAUD] Testing 9600 baud...
+[AUTO-BAUD] Testing 115200 baud...
+[AUTO-BAUD] Testing 19200 baud...
+[AUTO-BAUD] Testing 38400 baud...
+[AUTO-BAUD] Testing 57600 baud...
+[AUTO-BAUD] Testing 2400 baud...
+[AUTO-BAUD] Testing 4800 baud...
+[AUTO-BAUD] ? Failed to detect baud rate. Defaulting to 9600.
+[SYSTEM] Workflow 'Cisco 2960X Initial Setup (with Fallback)' started on COM3 @ 9600 baud
+
+CPU rev: B
+Image passed digital signature verification
+Board rev: 18
+Testing DataBus...
+Testing AddressBus...
+Testing Memory from 0x00000000 to 0x1fffffff...  - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / 
+Using driver version 4 for media type 1
+Xmodem file system is available.
+Base ethernet MAC Address: e0:89:9d:2d:6b:80
+The password-recovery mechanism is enabled.
+APM USBUSB EHCI 1.00
+USB EHCI 1.00
+USB Console INIT
+Initializing Flash...
+mifs[5]: 12 files, 1 directories
+mifs[5]: Total bytes     :    1806336
+mifs[5]: Bytes used      :     833536
+mifs[5]: Bytes available :     972800
+mifs[5]: mifs fsck took 0 seconds.
+mifs[6]: 0 files, 0 directories
+mifs[6]: Total bytes     :    3870720
+mifs[6]: Bytes used      :        512
+mifs[6]: Bytes available :    3870208
+mifs[6]: mifs fsck took 1 seconds.
+mifs[7]: 5 files, 1 directories
+mifs[7]: Total bytes     :     258048
+mifs[7]: Bytes used      :       8192
+mifs[7]: Bytes available :     249856
+mifs[7]: mifs fsck took 0 seconds.
+mifs[8]: 5 files, 1 directories
+mifs[8]: Total bytes     :     258048
+mifs[8]: Bytes used      :       8192
+mifs[8]: Bytes available :     249856
+mifs[8]: mifs fsck took 0 seconds.
+mifs[9]: filesystem check interrupted!
+...done Initializing Flash.
+
+The system has been interrupted, or encountered an error
+during initialization of the flash filesystem.  The following
+commands will initialize the flash filesystem, and finish
+loading the operating system software:
+
+    flash_init
+    boot
+
+
+switch: [ERROR] Critical Failure: Timeout waiting for any of: [Press RETURN to get started, Would you like to enter the initial configuration dialog]
+
+=================================================
+Workflow Ended: 2025-12-15 10:58:01
+Status: FAILED
+=================================================

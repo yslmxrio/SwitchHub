@@ -1,0 +1,19 @@
+=================================================
+SwitchHub Workflow Log
+=================================================
+Port:      COM5
+Asset ID:  (not set)
+Workflow:  Cisco 2960x/3750x Factory Reset (MODE)
+Started:   2025-12-16 10:43:16
+=================================================
+
+[AUTO-BAUD] Scanning for signal (20s timeout)...
+[AUTO-BAUD] Please plug in or reboot the device now.
+[AUTO-BAUD] Timed out (No valid signal). Defaulting to 9600.
+[SYSTEM] Workflow 'Cisco 2960x/3750x Factory Reset (MODE)' started on COM5 @ 9600 baud
+[SYSTEM] Workflow interrupted by user
+
+=================================================
+Workflow Ended: 2025-12-16 10:43:42
+Status: INTERRUPTED BY USER
+=================================================

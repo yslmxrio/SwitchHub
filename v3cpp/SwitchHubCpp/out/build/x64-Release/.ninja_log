@@ -1,0 +1,19 @@
+# ninja log v6
+83	1066	7875031976327840	CMakeFiles/SwitchHub.dir/_deps/imgui-src/backends/imgui_impl_opengl3.cpp.obj	b1b9acd2d3bd4610
+77	2020	7875031976257500	CMakeFiles/SwitchHub.dir/_deps/imgui-src/backends/imgui_impl_glfw.cpp.obj	8d9b151d569c10c
+46	19797	7875031975927714	CMakeFiles/SwitchHub.dir/src/Main.cpp.obj	b07effc4505fa575
+50	78	7875031975088307	clean	5345ca6175c2c29c
+64	2310	7875031976140164	CMakeFiles/SwitchHub.dir/_deps/imgui-src/imgui_tables.cpp.obj	8544979fba929e99
+19798	20941	7875032173478958	SwitchHub.exe	cd9bd82a07206ac2
+57	3556	7875031976034495	CMakeFiles/SwitchHub.dir/_deps/imgui-src/imgui_draw.cpp.obj	b5bc522551f8b7a5
+71	4424	7875031976190715	CMakeFiles/SwitchHub.dir/_deps/imgui-src/imgui_widgets.cpp.obj	b3897213b4091648
+52	8226	7875031975982772	CMakeFiles/SwitchHub.dir/_deps/imgui-src/imgui.cpp.obj	5d1bc9cea680a851
+30	51	7875118110825833	clean	5345ca6175c2c29c
+72	1028	7875118111863901	CMakeFiles/SwitchHub.dir/_deps/imgui-src/backends/imgui_impl_opengl3.cpp.obj	b1b9acd2d3bd4610
+67	1764	7875118111803647	CMakeFiles/SwitchHub.dir/_deps/imgui-src/backends/imgui_impl_glfw.cpp.obj	8d9b151d569c10c
+56	2048	7875118111695403	CMakeFiles/SwitchHub.dir/_deps/imgui-src/imgui_tables.cpp.obj	8544979fba929e99
+51	3618	7875118111625930	CMakeFiles/SwitchHub.dir/_deps/imgui-src/imgui_draw.cpp.obj	b5bc522551f8b7a5
+61	4806	7875118111743384	CMakeFiles/SwitchHub.dir/_deps/imgui-src/imgui_widgets.cpp.obj	b3897213b4091648
+45	9011	7875118111469990	CMakeFiles/SwitchHub.dir/_deps/imgui-src/imgui.cpp.obj	5d1bc9cea680a851
+39	21082	7875118111469990	CMakeFiles/SwitchHub.dir/src/Main.cpp.obj	b07effc4505fa575
+21083	22717	7875118321954265	SwitchHub.exe	cd9bd82a07206ac2

@@ -1,0 +1,17 @@
+=================================================
+SwitchHub Workflow Log
+=================================================
+Port:      COM3
+Asset ID:  (not set)
+Workflow:  Baud Detection
+Started:   2025-12-16 13:12:28
+=================================================
+
+[AUTO-BAUD] Scanning for signal (20s timeout)...
+[AUTO-BAUD] Please plug in or reboot the device now.
+[AUTO-BAUD] Timed out (No valid signal). Defaulting to 9600.
+
+=================================================
+Workflow Ended: 2025-12-16 13:12:50
+Status: INCOMPLETE
+=================================================
