@@ -1,0 +1,20 @@
+=================================================
+SwitchHub Workflow Log
+=================================================
+Port:      COM8
+Asset ID:  (not set)
+Workflow:  Manual Override
+Started:   2026-01-08 13:33:21
+=================================================
+
+[SYSTEM] Workflow 'Manual Override' started on COM8 @ 9600 baud
+[TX] help
+help
+         ^
+ % Unrecognized command found at '^' position.
+<HPE-tcl>[SYSTEM] Workflow completed successfully
+
+=================================================
+Workflow Ended: 2026-01-08 13:33:23
+Status: SUCCESS
+=================================================

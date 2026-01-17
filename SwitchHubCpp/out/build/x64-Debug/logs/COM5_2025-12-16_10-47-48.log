@@ -1,0 +1,17 @@
+=================================================
+SwitchHub Workflow Log
+=================================================
+Port:      COM5
+Asset ID:  (not set)
+Workflow:  Baud Detection
+Started:   2025-12-16 10:47:48
+=================================================
+
+[AUTO-BAUD] Scanning for signal (20s timeout)...
+[AUTO-BAUD] Please plug in or reboot the device now.
+[AUTO-BAUD] MATCH! Detected: 115200
+
+=================================================
+Workflow Ended: 2025-12-16 10:47:52
+Status: INCOMPLETE
+=================================================

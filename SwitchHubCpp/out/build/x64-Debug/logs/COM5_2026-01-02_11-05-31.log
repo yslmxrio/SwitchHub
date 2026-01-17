@@ -1,0 +1,144 @@
+=================================================
+SwitchHub Workflow Log
+=================================================
+Port:      COM5
+Asset ID:  (not set)
+Workflow:  Dell PowerConnect 5548P Factory Reset Template
+Started:   2026-01-02 11:05:31
+=================================================
+
+[SYSTEM] Workflow 'Dell PowerConnect 5548P Factory Reset Template' started on COM5 @ 9600 baud
+[SYSTEM] Starting Interrupt Sequence: 
+
+Boot1 Checksum Test...............................PASS
+
+Boot2 Checksum Test...............................PASS
+
+Flash Image Validation Test.......................PASS
+
+
+
+BOOT Software Version 1.0.0.14 Built  02-Apr-2012  18:41:25
+
+                          ##                                   
+ ###########            #####        ######        ######      
+ ##############       #########      ######        ######      
+ ###############     #########       ######        ######      
+ ################  ########## ####   ######        ######      
+ ################ #########  ######  ######        ######      
+ ########################  ######### ######        ######      
+ ######   ##############  ########  #######        ######      
+ ######    ###################### #########        ######      
+ ######    ####################  ##########        ######      
+ ######    ###################  ###########        ######      
+ ######    ################## #############        ######      
+ ######   #################################        ######      
+ ################################################# ############
+ ################  ################  ############# ############
+ ################   ##############   ############# ############
+ ###############      ##########     ############# ############
+ ##############        ########      ############# ############
+ ###########             ####        ############# ############
+                          ##                                   
+
+
+PowerConnect 5548P device with Marvell ARM CPU core. 256 MByte SDRAM. 
+I-Cache 16 KB. D-Cache 16 KB. L2 Cache 256 KB. Cache Enabled.
+
+
+MAC Address   :  f8:b1:56:39:95:71.
+
+Autoboot in 2 seconds - press RETURN or Esc. to abort and enter prom.
+[2J
+     Startup Menu
+
+[1]  Download Software
+[2]  Erase Flash File
+[3]  Password Recovery Procedure
+[4]  Set Terminal Baud-Rate
+[5]  Stack menu
+[6]  Back
+ Enter your choice or press 'ESC' to exit: [2J
+
+Exit from boot menu. Continue with flow.
+Preparing to decompress... 
+ 0%
+[SUCCESS] Interrupt matched target prompt.
+[TX-RAW] 2
+ 50% 100%
+Decompressing SW from image-1
+   0%   1%   2%   3%   4%   5%   6%   7%   8%   9%  10%  11%  12%  13%  14%  15%  16%  17%  18%  19%  20%  21%  22%  23%  24%  25%  26%  27%  28%  29%  30%  31%  32%  33%  34%  35%  36%  37%  38%  39%  40%  41%  42%  43%  44%  45%  46%  47%  48%  49%  50%  51%  52%  53%  54%  55%  56%  57%  58%  59%  60%  61%  62%  63%  64%  65%  66%  67%  68%  69%  70%  71%  72%  73%  74%  75%  76%  77%  78%  79%  80%  81%  82%  83%  84%  85%  86%  87%  88%  89%  90%  91%  92%  93%  94%  95% 100%
+
+OK
+Running from RAM...
+
+*********************************************************************
+*** Running  SW  Ver. 4.1.0.12  Date  22-Jul-2013  Time  16:32:43 ***
+*********************************************************************
+
+HW version is 00.00.02
+Base Mac address is: f8:b1:56:39:95:71
+Dram size is  : 256M bytes
+Dram first block size is  : 229376K bytes
+Dram first PTR is  : 0x1C00000
+Dram second block size is  : 4096K bytes
+Dram second PTR is  : 0xFC00000
+Flash size is: 16M
+01-Oct-2006 16:32:48 %CDB-I-LOADCONFIG: Loading running configuration.
+01-Oct-2006 16:32:48 %CDB-I-LOADCONFIG: Loading startup configuration.
+Device configuration:
+Slot 1 - PowerConnect 5548P
+Device 0: GT_98DX4122 (BobCat)
+Device 1: GT_98DX4123 (BobCat)
+
+------------------------------------
+-- Unit Number 1                  --
+------------------------------------
+
+BobCat, Revision(A2), Cpu(800)
+BobCat, Revision(A2), Cpu(800)
+01-Oct-2006 16:33:04 %INIT-I-InitCompleted: Initialization task is completed
+
+
+>
+-----------------------------------
+-- Unit Number 1  Master Enabled --
+-----------------------------------
+
+01-Oct-2006 16:33:12 %Environment-I-FAN-STAT-CHNG: FAN# 1 status changed - Fan turned OFF.
+Tapi Version: v1.9.3.2
+01-Oct-2006 16:33:12 %Environment-I-FAN-STAT-CHNG: FAN# 2 status changed - Fan turned OFF.
+01-Oct-2006 16:33:12 %Environment-I-PS-STAT-CHNG: PS# 1 status changed - operational.
+Core Version: v1.9.3.2
+01-Oct-2006 16:33:12 %Entity-I-SEND-ENT-CONF-CHANGE-TRAP: entity configuration change trap.
+01-Oct-2006 16:33:15 %MLDP-I-MASTER: Switching to the Master Mode.
+01-Oct-2006 16:33:15 %Stack-I-STCK-CFG-CHNG: Configuration changed: chain
+01-Oct-2006 16:33:15 %SNMP-I-CDBITEMSNUM: Number of running configuration items loaded: 0
+
+01-Oct-2006 16:33:15 %SNMP-I-CDBITEMSNUM: Number of startup configuration items loaded: 0
+
+>lcli
+[2J[1mWelcome to Dell Easy Setup Wizard.[0m
+
+The Setup Wizard guides you through the initial switch configuration, and gets 
+you up and running as quickly as possible.  You can skip the setup wizard, and 
+enter CLI mode to manually configure the switch.
+The system will prompt you with a default answer; by pressing enter, you accept
+the default.
+You must respond to the next question to run the setup wizard within 
+60 seconds, otherwise the system will continue with normal operation using 
+the default system configuration.
+
+Would you like to enter the setup wizard (you must answer this question within 
+60 seconds)? (Y/N)[[1mY[0m] 
+Setup Wizard Timeout.....
+
+
+
+
+console> [ERROR] Critical Failure: Timeout waiting for: <Y/N> ?
+
+=================================================
+Workflow Ended: 2026-01-02 11:08:11
+Status: FAILED
+=================================================

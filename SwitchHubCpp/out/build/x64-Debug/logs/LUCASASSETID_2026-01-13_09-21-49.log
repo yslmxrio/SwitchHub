@@ -1,0 +1,20 @@
+=================================================
+SwitchHub Workflow Log
+=================================================
+Port:      COM5
+Asset ID:  LUCASASSETID
+Workflow:  Manual Command
+Started:   2026-01-13 09:21:49
+=================================================
+
+[SYSTEM] Workflow 'Manual Command' started on COM5 @ 9600 baud
+[TX] 7
+7
+The current setting will run with current configuration file when reboot.
+Are you sure you want to skip current configuration file when reboot? Yes or No
+(Y/N):[SYSTEM] Workflow completed successfully
+
+=================================================
+Workflow Ended: 2026-01-13 09:21:51
+Status: SUCCESS
+=================================================

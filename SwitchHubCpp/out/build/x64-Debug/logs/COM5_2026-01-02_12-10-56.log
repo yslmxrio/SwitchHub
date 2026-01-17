@@ -1,0 +1,71 @@
+=================================================
+SwitchHub Workflow Log
+=================================================
+Port:      COM5
+Asset ID:  (not set)
+Workflow:  Dell PowerConnect 5548P Factory Reset Template
+Started:   2026-01-02 12:10:56
+=================================================
+
+[SYSTEM] Workflow 'Dell PowerConnect 5548P Factory Reset Template' started on COM5 @ 9600 baud
+
+Boot1 Checksum Test...............................PASS
+
+Boot2 Checksum Test...............................PASS
+
+Flash Image Validation Test.......................PASS
+
+
+
+BOOT Software Version 1.0.0.14 Built  02-Apr-2012  18:41:25
+
+                          ##                                   
+ ###########            #####        ######        ######      
+ ##############       #########      ######        ######      
+ ###############     #########       ######        ######      
+ ################  ########## ####   ######        ######      
+ ################ #########  ######  ######        ######      
+ ########################  ######### ######        ######      
+ ######   ##############  ########  #######        ######      
+ ######    ###################### #########        ######      
+ ######    ####################  ##########        ######      
+ ######    ###################  ###########        ######      
+ ######    ################## #############        ######      
+ ######   #################################        ######      
+ ################################################# ############
+ ################  ################  ############# ############
+ ################   ##############   ############# ############
+ ###############      ##########     ############# ############
+ ##############        ########      ############# ############
+ ###########             ####        ############# ############
+                          ##                                   
+
+
+PowerConnect 5548P device with Marvell ARM CPU core. 256 MByte SDRAM. 
+I-Cache 16 KB. D-Cache 16 KB. L2 Cache 256 KB. Cache Enabled.
+
+
+MAC Address   :  f8:b1:56:39:95:71.
+
+Autoboot in 2 seconds - press RETURN or Esc. to abort and enter prom.
+[TX-RAW] 
+[2J
+     Startup Menu
+
+[1]  Download Software
+[2]  Erase Flash File
+[3]  Password Recovery Procedure
+[4]  Set Terminal Baud-Rate
+[5]  Stack menu
+[6]  Back
+ Enter your choice or press 'ESC' to exit: [TX-RAW] 2
+
+Warning! About to erase a Flash file.
+
+Are you sure (Y/N) ? [TX-RAW] 
+[ERROR] Critical Failure: Timeout waiting for: :
+
+=================================================
+Workflow Ended: 2026-01-02 12:11:16
+Status: FAILED
+=================================================

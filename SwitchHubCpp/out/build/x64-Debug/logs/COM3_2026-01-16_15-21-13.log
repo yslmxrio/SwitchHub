@@ -1,0 +1,16 @@
+=================================================
+SwitchHub Workflow Log
+=================================================
+Port:      COM3
+Asset ID:  (not set)
+Workflow:  Cisco 2960x/3750x Factory Reset (MODE)
+Started:   2026-01-16 15:21:13
+=================================================
+
+[SYSTEM] Workflow 'Cisco 2960x/3750x Factory Reset (MODE)' started on COM3 @ 9600 baud
+[SYSTEM] Workflow interrupted by user
+
+=================================================
+Workflow Ended: 2026-01-16 15:21:15
+Status: INTERRUPTED BY USER
+=================================================

@@ -1,0 +1,18 @@
+=================================================
+SwitchHub Workflow Log
+=================================================
+Port:      COM5
+Asset ID:  (not set)
+Workflow:  Cisco 2960x/3750x Factory Reset (MODE)
+Started:   2025-12-16 14:47:40
+=================================================
+
+[AUTO-BAUD] Scanning signal (Hardware Framing Check)...
+[AUTO-BAUD] LOCKED! Signal confirmed at 9600 baud.
+[SYSTEM] Workflow 'Cisco 2960x/3750x Factory Reset (MODE)' started on COM5 @ 9600 baud
+[SYSTEM] Workflow interrupted by user
+
+=================================================
+Workflow Ended: 2025-12-16 14:47:50
+Status: INTERRUPTED BY USER
+=================================================

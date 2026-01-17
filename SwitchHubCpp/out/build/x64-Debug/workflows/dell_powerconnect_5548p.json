@@ -1,0 +1,82 @@
+{
+  "name": "Dell PowerConnect 5548P Factory Reset Template",
+  "description": "",
+  "auto_detect_baud": false,
+  "steps": [
+    {
+      "name": "Pre-Boot",
+      "status_text": "Interrupting Autoboot",
+      "command": null,
+      "expect": "Esc. to abort and enter prom.",
+      "timeout": 150
+    },
+    {
+      "name": "",
+      "status_text": "Pressing Esc",
+      "send_raw": true,
+      "command": "\u001b",
+      "expect": "to Exit:",
+      "timeout": 100
+    },
+    {
+      "name": "Menu Choice",
+      "status_text": "Choosing appropiate Menu entry",
+      "send_raw": true,
+      "command": "2",
+      "expect": "Are you sure",
+      "timeout": 150
+    },
+    {
+      "name": "",
+      "status_text": "Accept y/n prompt",
+      "send_raw": true,
+      "command": "y",
+      "expect": ":",
+      "timout": 150
+    },
+    {
+      "name": "",
+      "status_text": "Deleting flash startup-config file",
+      "command": "config",
+      "expect": "Press Enter To Continue",
+      "timeout": 150
+    },
+    {
+      "name": "",
+      "status_text": "Deleting flash startup-config file",
+      "command": "",
+      "expect": "to exit:",
+      "timeout": 150
+    },
+    {
+      "name": "",
+      "status_text": "Target Exit of Pre-Boot Menu",
+      "command": "\u001b",
+      "expect": "Exit from boot menu",
+      "timeout": 150
+    },
+    {
+      "name": "",
+      "status_text": "Booting...",
+      "command": null,
+      "expect": "Would you like to enter the setup wizard",
+      "timeout": 150
+    },
+    {
+      "name": "",
+      "status_text": "Skipping Setup Wizard",
+      "command": "n",
+      "send_raw": true,
+      "expect": "console>",
+      "timeout": 150
+    },
+    {
+      "name": "Workflow Complete",
+      "status": "Successfully Finished",
+      "command": null,
+      "expect": null,
+      "timeout": 0,
+      "complete": true
+    }
+  ]
+}

@@ -1,0 +1,106 @@
+{
+
+  "name": "HP JG937A Firmware Factory Reset",
+  "description": "",
+  "auto_detect_baud": false,
+  "steps": [
+    {
+      "name": "Interrupt Boot",
+      "status_text": "Interrupting Boot proccess",
+      "send_raw": true,
+      "interrupt": "\u0002",
+      "expect": "Enter your choice.*:",
+      "timeout": 180
+    },
+    {
+      "name": "Skip Config",
+      "status_text": "Setting 'Skip Startup Configuration' flag",
+      "command": "7",
+      "expect": "\\(Y/N\\)s*:",
+      "timeout": 60
+    },
+    {
+      "name": "Confirm",
+      "status_text": "Confirming flag setting",
+      "command": "Y",
+      "expect": "Enter your choice",
+      "timeout": 120
+    },
+    {
+      "name": "Exit PreBoot",
+      "status_text": "Exiting EXTENDED BOOT MENU",
+      "command": "0",
+      "expect": "Starting...",
+      "timeout": 90
+    },
+    {
+      "name": "Booting",
+      "status_text": "Booting OS Image",
+      "command": null,
+      "expect": "Started automatic configuration",
+      "timeout": 900
+    },
+    {
+      "name": "Break Auto Config",
+      "status_text": "Breaking automatic configuration process..",
+      "command": "\u0003",
+      "expect": "Automatic configuration is aborted.",
+      "timeout": 90
+    },
+    {
+      "name": "Init",
+      "status_text": "....",
+      "command": null,
+      "expect": "ENTER",
+      "timeout": 45
+    },
+    {
+      "name": "Init",
+      "status_text": "Initializing Login",
+      "command": "\r\n",
+      "expect": "<HPE>",
+      "timeout": 90
+    },
+    {
+      "name": "Silence Logs",
+      "status_text": "Silencing terminal...",
+      "command": "undo terminal monitor",
+      "expect": "<.+>",
+      "timeout": 5
+    },
+    {
+      "name": "Change Dir",
+      "status_text": "Changing directory to flash:/",
+      "command": "cd flash:/",
+      "expect": ".*",
+      "timeout": 30
+    },
+    {
+      "name": "Dynamic File Delete",
+      "status_text": "Parsing directory and deleting configuration files",
+      "parse_and_delete": true,
+      "delete_path": "flash:/",
+      "preserve_extensions": [".bin", ".ipe"],
+      "preserve_dirs": [ "license", "versionInfo", "pki" ],
+      "delete_command": "delete /unreserved {path}",
+      "dir_delete_command": "rmdir {path}",
+      "timeout":  600
+    },
+    {
+      "name": "Directory Items",
+      "status_text": "Printing final dir content...",
+      "command": "dir",
+      "expect": "UNPROBABLE_EXPECT",
+      "timeout": 15,
+      "optional": true
+    },
+    {
+      "name": "Finish",
+      "status_text": "Successfully Finished.",
+      "command": null,
+      "expect": null,
+      "timeout": 0,
+      "complete": true
+    }
+  ]
+}

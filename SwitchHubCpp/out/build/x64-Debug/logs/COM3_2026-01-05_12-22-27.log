@@ -1,0 +1,15 @@
+=================================================
+SwitchHub Workflow Log
+=================================================
+Port:      COM3
+Asset ID:  (not set)
+Workflow:  HP / Aruba 2930F Firmware Factory Reset
+Started:   2026-01-05 12:22:27
+=================================================
+
+[ERROR] Critical Failure: open: Access is denied [system:5 at C:\Users\ITAD\Desktop\luca\vcpkg\installed\x64-windows\include\boost/asio/detail/impl/win_iocp_serial_port_service.ipp:66:5 in function 'class boost::system::error_code __cdecl boost::asio::detail::win_iocp_serial_port_service::open(class boost::asio::detail::win_iocp_handle_service::implementation_type &,const class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > &,class boost::system::error_code &)']
+
+=================================================
+Workflow Ended: 2026-01-05 12:22:27
+Status: FAILED
+=================================================

@@ -1,0 +1,89 @@
+{
+  "name": "HP / Aruba 2930F Firmware Factory Reset",
+  "description": "",
+  "auto_detect_baud": false,
+  "steps": [
+    {
+      "name": "Interrupt Boot",
+      "status_text": "Interrupting Boot proccess",
+      "command": null,
+      "expect": "Select profile",
+      "timeout": 900
+    },
+    {
+      "name": "Enter ROM",
+      "status_text": "Entering ROM Console",
+      "command": "0",
+      "expect": "=>",
+      "timeout": 60
+    },
+    {
+      "name": "Factory Reset Cmd",
+      "status_text": "Executing Firmware based Factory Reset",
+      "command": "erase-all zeroize",
+      "expect": "Continue (y/n)?",
+      "timeout": 60
+    },
+    {
+      "name": "Confirm",
+      "status_text": "Accepting Factory Reset prompt",
+      "command": "y",
+      "expect": "Zeroization has started",
+      "timeout": 240
+    },
+    {
+      "name": "Zeroization process",
+      "status_text": "Zeroization running (can take up to 60 min!)",
+      "command": null,
+      "expect": "Zeroization of the file system completed.",
+      "timeout": 3600
+    },
+    {
+      "name": "Zeroization process",
+      "status_text": "Continue Zeroization (can take up to 60 min!)",
+      "command": null,
+      "expect": "twice to continue",
+      "timeout": 3600
+    },
+    {
+      "name": "PAUSE",
+      "status_text": "Break...",
+      "command": null,
+      "expect": "IMPOSSIBLESTRING",
+      "timeout": 10,
+      "optional": true
+    },
+    {
+      "name": "Zero end prompt",
+      "status_text": "Ending Zeroization process..",
+      "send_raw": true,
+      "command": "\r\n",
+      "expect": "IMPOSSIBLE_EXPECT_TO_TIMEOUT",
+      "timeout": 1,
+      "optional": true
+    },
+    {
+      "name": "PASUE",
+      "status_text": "....",
+      "send_raw": true,
+      "command": "\r\n",
+      "expect": "Press any key to continue",
+      "timeout":
+    },
+    {
+      "name": "OS Booted",
+      "status_text": "Logging into booted Image",
+      "command": "\r\n",
+      "expect": "#",
+      "timeout": 360
+    },
+    {
+      "name": "Finish",
+      "status_text": "Successfully Finished.",
+      "command": null,
+      "expect": null,
+      "timeout": 0,
+      "complete": true
+    }
+  ]
+}

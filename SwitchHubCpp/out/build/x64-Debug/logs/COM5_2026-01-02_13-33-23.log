@@ -1,0 +1,15 @@
+=================================================
+SwitchHub Workflow Log
+=================================================
+Port:      COM5
+Asset ID:  (not set)
+Workflow:  Dell PowerConnect 5548P Factory Reset Template
+Started:   2026-01-02 13:33:23
+=================================================
+
+[ERROR] Critical Failure: open: Access is denied [system:5 at C:\Users\ITAD\Desktop\luca\vcpkg\installed\x64-windows\include\boost/asio/detail/impl/win_iocp_serial_port_service.ipp:66:5 in function 'class boost::system::error_code __cdecl boost::asio::detail::win_iocp_serial_port_service::open(class boost::asio::detail::win_iocp_handle_service::implementation_type &,const class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > &,class boost::system::error_code &)']
+
+=================================================
+Workflow Ended: 2026-01-02 13:33:23
+Status: FAILED
+=================================================

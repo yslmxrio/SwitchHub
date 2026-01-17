@@ -1,0 +1,16 @@
+=================================================
+SwitchHub Workflow Log
+=================================================
+Port:      COM5
+Asset ID:  (not set)
+Workflow:  Dell PowerConnect 5548P Factory Reset Template
+Started:   2026-01-02 12:09:33
+=================================================
+
+[SYSTEM] Workflow 'Dell PowerConnect 5548P Factory Reset Template' started on COM5 @ 9600 baud
+[SYSTEM] Workflow interrupted by user
+
+=================================================
+Workflow Ended: 2026-01-02 12:09:39
+Status: INTERRUPTED BY USER
+=================================================

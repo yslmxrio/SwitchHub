@@ -1,0 +1,17 @@
+=================================================
+SwitchHub Workflow Log
+=================================================
+Port:      COM8
+Asset ID:  (not set)
+Workflow:  HP JG937A Firmware Factory Reset
+Started:   2026-01-08 15:59:16
+=================================================
+
+[SYSTEM] Workflow 'HP JG937A Firmware Factory Reset' started on COM8 @ 9600 baud
+[SYSTEM] Starting Interrupt Sequence: 
+[SYSTEM] Workflow interrupted by user
+
+=================================================
+Workflow Ended: 2026-01-08 15:59:28
+Status: INTERRUPTED BY USER
+=================================================

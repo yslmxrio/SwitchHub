@@ -1,0 +1,76 @@
+{
+  "name": "Cisco Nexus (NX-OS) Factory Reset",
+  "description": "Wipes startup-config and vlan.dat, then reloads. Assumes default login (e.g., admin/no password).",
+  "steps": [
+    {
+      "name": "Waiting for login",
+      "status": "Starting: Waiting for login prompt",
+      "command": "",
+      "expect": "login:",
+      "timeout": 300
+    },
+    {
+      "name": "Sending username",
+      "status": "Logging in",
+      "command": "admin",
+      "expect": "Password:",
+      "timeout": 10
+    },
+    {
+      "name": "Sending password",
+      "status": "Logging in",
+      "command": "",
+      "expect": "#",
+      "timeout": 10
+    },
+    {
+      "name": "Erasing config",
+      "status": "Erasing startup-config",
+      "command": "write erase",
+      "expect": "This command will erase.*(y/n)",
+      "timeout": 10
+    },
+    {
+      "name": "Confirming erase",
+      "status": "Erasing config",
+      "command": "y",
+      "expect": "#",
+      "timeout": 20
+    },
+    {
+      "name": "Deleting vlan.dat",
+      "status": "Deleting vlan.dat",
+      "command": "delete bootflash:vlan.dat",
+      "expect": "(y/n)",
+      "timeout": 10
+    },
+    {
+      "name": "Confirming vlan.dat delete",
+      "status": "Deleting vlan.dat",
+      "command": "y",
+      "expect": "#",
+      "timeout": 10
+    },
+    {
+      "name": "Reloading",
+      "status": "Reloading switch",
+      "command": "reload",
+      "expect": "This command will reboot.*(y/n)",
+      "timeout": 10
+    },
+    {
+      "name": "Confirming reload",
+      "status": "Reloading... (Wait for finish)",
+      "command": "y",
+      "expect": "rebooting",
+      "timeout": 30
+    },
+    {
+      "name": "Workflow Complete",
+      "status": "Successfully Finished",
+      "command": null,
+      "expect": null,
+      "timeout": 0
+    }
+  ]
+}

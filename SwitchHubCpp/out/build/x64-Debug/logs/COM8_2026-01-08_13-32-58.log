@@ -1,0 +1,39 @@
+=================================================
+SwitchHub Workflow Log
+=================================================
+Port:      COM8
+Asset ID:  (not set)
+Workflow:  Manual Override
+Started:   2026-01-08 13:32:58
+=================================================
+
+[SYSTEM] Workflow 'Manual Override' started on COM8 @ 9600 baud
+[TX] dir
+dir
+Directory of flash:
+   0 -rw-     9459712 Aug 08 2008 20:00:00   5130ei-cmw710-boot-r3113p05.bin
+   1 -rw-    61349888 Aug 08 2008 20:00:00   5130ei-cmw710-system-r3113p05.bin
+   2 drw-           - Jan 01 2013 00:00:44   diagfile
+   3 -rw-        1311 Jan 01 2013 00:01:59   hostkey
+   4 -rw-        2981 Oct 12 2013 06:11:07   ifindex.dat
+   5 -rw-       13913 Nov 02 2014 22:02:28   karlsruhenewconfigswitchstartup.cfg
+   6 drw-           - Jan 01 2013 00:00:48   license
+   7 drw-           - Jan 02 2013 00:00:37   logfile
+   8 -rw-       13807 Nov 02 2014 22:49:33   newswitchconfig.cfg
+   9 drw-           - Jan 01 2013 00:02:02   pki
+  10 drw-           - Jan 01 2013 00:00:44   seclog
+  11 -rw-         591 Jan 01 2013 00:02:00   serverkey
+  12 -rw-       20722 Oct 12 2013 06:11:08   startup.cfg
+  13 -rw-      239708 Oct 12 2013 06:11:09   startup.mdb
+  14 -rw-       13723 Nov 03 2014 01:05:18   startup2.cfg
+  15 -rw-      216377 Nov 03 2014 00:11:02   startup2.mdb
+  16 drw-           - Jan 01 2013 00:00:54   versionInfo
+
+524288 KB total (443152 KB free)
+
+<HPE-tcl>[SYSTEM] Workflow completed successfully
+
+=================================================
+Workflow Ended: 2026-01-08 13:33:00
+Status: SUCCESS
+=================================================

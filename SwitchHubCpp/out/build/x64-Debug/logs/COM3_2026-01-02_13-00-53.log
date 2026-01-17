@@ -1,0 +1,324 @@
+=================================================
+SwitchHub Workflow Log
+=================================================
+Port:      COM3
+Asset ID:  (not set)
+Workflow:  Dell PowerConnect 5548P Factory Reset Template
+Started:   2026-01-02 13:00:53
+=================================================
+
+[SYSTEM] Workflow 'Dell PowerConnect 5548P Factory Reset Template' started on COM3 @ 9600 baud
+
+Boot1 Checksum Test...............................PASS
+
+Boot2 Checksum Test...............................PASS
+
+Flash Image Validation Test.......................PASS
+
+
+
+BOOT Software Version 1.0.0.14 Built  02-Apr-2012  18:41:25
+
+                          ##                                   
+ ###########            #####        ######        ######      
+ ##############       #########      ######        ######      
+ ###############     #########       ######        ######      
+ ################  ########## ####   ######        ######      
+ ################ #########  ######  ######        ######      
+ ########################  ######### ######        ######      
+ ######   ##############  ########  #######        ######      
+ ######    ###################### #########        ######      
+ ######    ####################  ##########        ######      
+ ######    ###################  ###########        ######      
+ ######    ################## #############        ######      
+ ######   #################################        ######      
+ ################################################# ############
+ ################  ################  ############# ############
+ ################   ##############   ############# ############
+ ###############      ##########     ############# ############
+ ##############        ########      ############# ############
+ ###########             ####        ############# ############
+                          ##                                   
+
+
+PowerConnect 5548P device with Marvell ARM CPU core. 256 MByte SDRAM. 
+I-Cache 16 KB. D-Cache 16 KB. L2 Cache 256 KB. Cache Enabled.
+
+
+MAC Address   :  f8:b1:56:39:40:8f.
+
+Autoboot in 2 seconds - press RETURN or Esc. to abort and enter prom.
+[TX-RAW] 
+[2J
+     Startup Menu
+
+[1]  Download Software
+[2]  Erase Flash File
+[3]  Password Recovery Procedure
+[4]  Set Terminal Baud-Rate
+[5]  Stack menu
+[6]  Back
+ Enter your choice or press 'ESC' to exit: [TX-RAW] 2
+
+Warning! About to erase a Flash file.
+
+Are you sure (Y/N) ? [TX-RAW] y
+y
+Write Flash file name (Up to 8 characters, Enter for none.):[TX] startup-config
+startup-config
+File startup-config (if present) will be erased after system initialization.
+
+==== Press Enter To Continue ====
+[TX] 
+[2J
+     Startup Menu
+
+[1]  Download Software
+[2]  Erase Flash File
+[3]  Password Recovery Procedure
+[4]  Set Terminal Baud-Rate
+[5]  Stack menu
+[6]  Back
+ Enter your choice or press 'ESC' to exit: [TX-RAW] 2
+
+Warning! About to erase a Flash file.
+
+Are you sure (Y/N) ? [TX-RAW] y
+y
+Write Flash file name (Up to 8 characters, Enter for none.):[TX] syslog1.sys
+syslog1.sys
+File syslog1.sys (if present) will be erased after system initialization.
+
+==== Press Enter To Continue ====
+[TX] 
+[2J
+     Startup Menu
+
+[1]  Download Software
+[2]  Erase Flash File
+[3]  Password Recovery Procedure
+[4]  Set Terminal Baud-Rate
+[5]  Stack menu
+[6]  Back
+ Enter your choice or press 'ESC' to exit: [TX-RAW] 2
+
+Warning! About to erase a Flash file.
+
+Are you sure (Y/N) ? [TX-RAW] y
+y
+Write Flash file name (Up to 8 characters, Enter for none.):[TX] syslog2.sys
+syslog2.sys
+File syslog2.sys (if present) will be erased after system initialization.
+
+==== Press Enter To Continue ====
+[TX] 
+[2J
+     Startup Menu
+
+[1]  Download Software
+[2]  Erase Flash File
+[3]  Password Recovery Procedure
+[4]  Set Terminal Baud-Rate
+[5]  Stack menu
+[6]  Back
+ Enter your choice or press 'ESC' to exit: [TX-RAW] 2
+
+Warning! About to erase a Flash file.
+
+Are you sure (Y/N) ? [TX-RAW] y
+y
+Write Flash file name (Up to 8 characters, Enter for none.):[TX] sshkeys.prv
+sshkeys.prv
+File sshkeys.prv (if present) will be erased after system initialization.
+
+==== Press Enter To Continue ====
+[TX] 
+[2J
+     Startup Menu
+
+[1]  Download Software
+[2]  Erase Flash File
+[3]  Password Recovery Procedure
+[4]  Set Terminal Baud-Rate
+[5]  Stack menu
+[6]  Back
+ Enter your choice or press 'ESC' to exit: [TX-RAW] 2
+
+Warning! About to erase a Flash file.
+
+Are you sure (Y/N) ? [TX-RAW] y
+y
+Write Flash file name (Up to 8 characters, Enter for none.):[TX] dhcpsn.prv
+dhcpsn.prv
+File dhcpsn.prv (if present) will be erased after system initialization.
+
+==== Press Enter To Continue ====
+[TX] 
+[2J
+     Startup Menu
+
+[1]  Download Software
+[2]  Erase Flash File
+[3]  Password Recovery Procedure
+[4]  Set Terminal Baud-Rate
+[5]  Stack menu
+[6]  Back
+ Enter your choice or press 'ESC' to exit: [TX-RAW] 2
+
+Warning! About to erase a Flash file.
+
+Are you sure (Y/N) ? [TX-RAW] y
+y
+Write Flash file name (Up to 8 characters, Enter for none.):[TX] aaafile.prv
+aaafile.prv
+File aaafile.prv (if present) will be erased after system initialization.
+
+==== Press Enter To Continue ====
+[TX] 
+[2J
+     Startup Menu
+
+[1]  Download Software
+[2]  Erase Flash File
+[3]  Password Recovery Procedure
+[4]  Set Terminal Baud-Rate
+[5]  Stack menu
+[6]  Back
+ Enter your choice or press 'ESC' to exit: [TX-RAW] 2
+
+Warning! About to erase a Flash file.
+
+Are you sure (Y/N) ? [TX-RAW] y
+y
+Write Flash file name (Up to 8 characters, Enter for none.):[TX] directory.prv
+directory.prv
+File directory.prv (if present) will be erased after system initialization.
+
+==== Press Enter To Continue ====
+[TX] 
+[2J
+     Startup Menu
+
+[1]  Download Software
+[2]  Erase Flash File
+[3]  Password Recovery Procedure
+[4]  Set Terminal Baud-Rate
+[5]  Stack menu
+[6]  Back
+ Enter your choice or press 'ESC' to exit: [TX] 
+[2J
+
+Exit from boot menu. Continue with flow.
+Preparing to decompress... 
+ 0% 50% 100%
+Decompressing SW from image-1
+   0%   1%   2%   3%   4%   5%   6%   7%   8%   9%  10%  11%  12%  13%  14%  15%  16%  17%  18%  19%  20%  21%  22%  23%  24%  25%  26%  27%  28%  29%  30%  31%  32%  33%  34%  35%  36%  37%  38%  39%  40%  41%  42%  43%  44%  45%  46%  47%  48%  49%  50%  51%  52%  53%  54%  55%  56%  57%  58%  59%  60%  61%  62%  63%  64%  65%  66%  67%  68%  69%  70%  71%  72%  73%  74%  75%  76%  77%  78%  79%  80%  81%  82%  83%  84%  85%  86%  87%  88%  89%  90%  91%  92%  93%  94%  95% 100%
+
+OK
+Running from RAM...
+
+*********************************************************************
+*** Running  SW  Ver. 4.1.0.12  Date  22-Jul-2013  Time  16:32:43 ***
+*********************************************************************
+
+HW version is 00.00.02
+Base Mac address is: f8:b1:56:39:40:8f
+Dram size is  : 256M bytes
+Dram first block size is  : 229376K bytes
+Dram first PTR is  : 0x1C00000
+Dram second block size is  : 4096K bytes
+Dram second PTR is  : 0xFC00000
+Flash size is: 16M
+01-Oct-2006 16:32:48 %CDB-I-LOADCONFIG: Loading running configuration.
+01-Oct-2006 16:32:50 %CDB-I-LOADCONFIG: Loading startup configuration.
+Device configuration:
+Slot 1 - PowerConnect 5548P
+Device 0: GT_98DX4122 (BobCat)
+Device 1: GT_98DX4123 (BobCat)
+
+------------------------------------
+-- Unit Number 1                  --
+------------------------------------
+
+BobCat, Revision(A2), Cpu(800)
+BobCat, Revision(A2), Cpu(800)
+01-Oct-2006 16:33:07 %INIT-I-InitCompleted: Initialization task is completed
+
+
+>
+-----------------------------------
+-- Unit Number 1  Master Enabled --
+-----------------------------------
+
+Tapi Version: v1.9.3.2
+01-Oct-2006 16:33:14 %Environment-I-FAN-STAT-CHNG: FAN# 1 status changed - Fan turned OFF.
+01-Oct-2006 16:33:14 %Environment-I-FAN-STAT-CHNG: FAN# 2 status changed - Fan turned OFF.
+01-Oct-2006 16:33:14 %Environment-I-PS-STAT-CHNG: PS# 1 status changed - operational.
+Core Version: v1.9.3.2
+01-Oct-2006 16:33:14 %Entity-I-SEND-ENT-CONF-CHANGE-TRAP: entity configuration change trap.
+01-Oct-2006 16:33:17 %MLDP-I-MASTER: Switching to the Master Mode.
+01-Oct-2006 16:33:17 %Stack-I-STCK-CFG-CHNG: Configuration changed: chain
+01-Oct-2006 16:33:17 %SNMP-I-CDBITEMSNUM: Number of running configuration items loaded: 353
+
+01-Oct-2006 16:33:17 %SNMP-I-CDBITEMSNUM: Number of startup configuration items loaded: 353
+
+>lcli
+01-Oct-2006 16:33:20 %LINK-W-Down:  gi1/0/1
+
+GES00683_SW01> 01-Oct-2006 16:33:21 %LINK-W-Down:  gi1/0/2
+01-Oct-2006 16:33:21 %LINK-W-Down:  gi1/0/3
+01-Oct-2006 16:33:21 %LINK-W-Down:  gi1/0/4
+01-Oct-2006 16:33:21 %LINK-W-Down:  gi1/0/5
+01-Oct-2006 16:33:21 %LINK-W-Down:  gi1/0/6
+01-Oct-2006 16:33:21 %LINK-W-Down:  gi1/0/7
+01-Oct-2006 16:33:21 %LINK-W-Down:  gi1/0/8
+01-Oct-2006 16:33:21 %LINK-W-Down:  gi1/0/9
+01-Oct-2006 16:33:21 %LINK-W-Down:  gi1/0/10
+01-Oct-2006 16:33:21 %LINK-W-Down:  gi1/0/11
+01-Oct-2006 16:33:21 %LINK-W-Down:  gi1/0/12
+01-Oct-2006 16:33:21 %LINK-W-Down:  gi1/0/13
+01-Oct-2006 16:33:21 %LINK-W-Down:  gi1/0/14
+01-Oct-2006 16:33:21 %LINK-W-Down:  gi1/0/15
+01-Oct-2006 16:33:21 %LINK-W-Down:  gi1/0/16
+01-Oct-2006 16:33:21 %LINK-W-Down:  gi1/0/17
+01-Oct-2006 16:33:21 %LINK-W-Down:  gi1/0/18
+01-Oct-2006 16:33:21 %LINK-W-Down:  gi1/0/19
+01-Oct-2006 16:33:21 %LINK-W-Down:  gi1/0/20
+01-Oct-2006 16:33:21 %LINK-W-Down:  gi1/0/21
+01-Oct-2006 16:33:21 %LINK-W-Down:  gi1/0/22
+01-Oct-2006 16:33:21 %LINK-W-Down:  gi1/0/23
+01-Oct-2006 16:33:21 %LINK-W-Down:  gi1/0/24
+01-Oct-2006 16:33:21 %LINK-W-Down:  gi1/0/25
+01-Oct-2006 16:33:21 %LINK-W-Down:  gi1/0/26
+01-Oct-2006 16:33:21 %LINK-W-Down:  gi1/0/27
+01-Oct-2006 16:33:21 %LINK-W-Down:  gi1/0/28
+01-Oct-2006 16:33:21 %LINK-W-Down:  gi1/0/29
+01-Oct-2006 16:33:21 %LINK-W-Down:  gi1/0/30
+01-Oct-2006 16:33:21 %LINK-W-Down:  gi1/0/31
+01-Oct-2006 16:33:21 %LINK-W-Down:  gi1/0/32
+01-Oct-2006 16:33:21 %LINK-W-Down:  gi1/0/33
+01-Oct-2006 16:33:21 %LINK-W-Down:  gi1/0/34
+01-Oct-2006 16:33:21 %LINK-W-Down:  gi1/0/35
+01-Oct-2006 16:33:21 %LINK-W-Down:  gi1/0/36
+01-Oct-2006 16:33:21 %LINK-W-Down:  gi1/0/37
+01-Oct-2006 16:33:21 %LINK-W-Down:  gi1/0/38
+01-Oct-2006 16:33:21 %LINK-W-Down:  gi1/0/39
+01-Oct-2006 16:33:21 %LINK-W-Down:  gi1/0/40
+01-Oct-2006 16:33:21 %LINK-W-Down:  gi1/0/41
+01-Oct-2006 16:33:21 %LINK-W-Down:  gi1/0/42
+01-Oct-2006 16:33:21 %LINK-W-Down:  gi1/0/43
+01-Oct-2006 16:33:21 %LINK-W-Down:  gi1/0/44
+01-Oct-2006 16:33:22 %LINK-W-Down:  gi1/0/45
+01-Oct-2006 16:33:22 %LINK-W-Down:  gi1/0/46
+01-Oct-2006 16:33:22 %LINK-W-Down:  gi1/0/47
+01-Oct-2006 16:33:22 %LINK-W-Down:  gi1/0/48
+01-Oct-2006 16:33:22 %LINK-W-Down:  te1/0/1
+01-Oct-2006 16:33:23 %LINK-W-Down:  te1/0/2
+01-Oct-2006 16:34:09 %SYSLOG-N-LOGGING: Logging started.
+01-Oct-2006 16:35:28 %INIT-I-Startup: Cold Startup
+[ERROR] Critical Failure: Timeout waiting for: Would you like to enter the setup wizard
+
+=================================================
+Workflow Ended: 2026-01-02 13:04:07
+Status: FAILED
+=================================================

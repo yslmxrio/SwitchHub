@@ -1,0 +1,107 @@
+{
+
+  "name": "HP JG937A Firmware Factory Reset",
+  "description": "",
+  "auto_detect_baud": false,
+  "steps": [
+    {
+      "name": "Interrupt Boot",
+      "status_text": "Interrupting Boot proccess",
+      "send_raw": true,
+      "interrupt": "\u0002",
+      "expect": "EXTENDED BOOT MENU",
+      "timeout": 180
+    },
+    {
+      "name": "Skip Config",
+      "status_text": "Setting 'Skip Startup Configuration' flag",
+      "command": "7",
+      "expect": "(Y/N):",
+      "timeout": 60
+    },
+    {
+      "name": "Confirm",
+      "status_text": "Confirming flag setting",
+      "command": "Y",
+      "expect": "Enter your choice",
+      "timeout": 120
+    },
+    {
+      "name": "Exit PreBoot",
+      "status_text": "Exiting EXTENDED BOOT MENU",
+      "command": "0",
+      "expect": "Starting...",
+      "timeout": 90
+    },
+    {
+      "name": "Booting",
+      "status_text": "Booting OS Image",
+      "command": null,
+      "expect": "Started automaic configuration",
+      "timeout": 900
+    },
+    {
+      "name": "Break Auto Config",
+      "status_text": "Breaking automatic configuration process..",
+      "command": "\u0003",
+      "expect": "Automatic configuration is aborted.",
+      "timeout": 90
+    },
+    {
+      "name": "Init",
+      "status_text": "......",
+      "command": "\r\n",
+      "expect": "<HPE>",
+      "timeout": 90
+    },
+    {
+      "name": "Entering Tcl shell",
+      "status": "Initializing TCL",
+      "command": "tclsh",
+      "expect": "(<.+>|tcl)",
+      "timeout": 10
+    },
+    {
+      "name": "Tcl: Starting loop",
+      "status": "Scanning flash",
+      "command": "foreach f [glob -nocomplain flash:/*] { \\",
+      "expect": "\\+>",
+      "timeout": 10
+    },
+    {
+      "name": "Tcl: Setting vars",
+      "status": "Parsing filenames",
+      "command": "set fname [file tail $f]; \\",
+      "expect": "\\+>",
+      "timeout": 10
+    },
+    {
+      "name": "Tcl: OS Protection Check",
+      "status": "Verifying OS files",
+      "command": "if {[string match \"*.bin\" $fname] || [string match \"*.ipe\" $fname] || [file isdirectory $f]} { \\",
+      "expect": "\\+>",
+      "timeout": 10
+    },
+    {
+      "name": "Tcl: Skip logic",
+      "status": "Skipping OS/System",
+      "command": "puts \"PRESERVING OS/System file: $fname\"; continue }; \\",
+      "expect": "\\+>",
+      "timeout": 10
+    },
+    {
+      "name": "Tcl: Wipe logic",
+      "status": "Wiping Configs/Logs",
+      "command": "puts \"DECOMMISSIONING: Deleting $fname\"; file delete -force $f }",
+      "expect": "(<.+>|tcl)",
+      "timeout": 120
+    },
+    {
+      "name": "Exiting Tcl shell",
+      "status": "Finalizing",
+      "command": "tclquit",
+      "expect": "<.+>",
+      "timeout": 10
+    }
+  ]
+}

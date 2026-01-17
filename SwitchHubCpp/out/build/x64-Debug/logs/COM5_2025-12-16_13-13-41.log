@@ -1,0 +1,284 @@
+=================================================
+SwitchHub Workflow Log
+=================================================
+Port:      COM5
+Asset ID:  (not set)
+Workflow:  Cisco Catalyst 3850 (IOS-XE) Recovery (MODE)
+Started:   2025-12-16 13:13:41
+=================================================
+
+[SYSTEM] Workflow 'Cisco Catalyst 3850 (IOS-XE) Recovery (MODE)' started on COM5 @ 9600 baud
+
+Interface GE 0 link down***ERROR: PHY link is down
+The "IP_ADDR" environment variable is not set.
+
+The system is about to execute the autoboot command.
+
+Interrupt the system within 5 seconds to intervene.
+
+
+Getting rest of image
+Reading full image into memory...Check base package header ...: done = 16384
+Getting rest of image
+Reading full image into memory....done
+Reading full base package into memory...
+Autoboot process terminated...
+
+Error loading "flash:packages.conf"
+Boot process failed...
+
+The system is unable to boot automatically. The 
+BOOT environment variable needs to be set to a 
+bootable image. 
+
+
+switch: [TX] flash_init
+flash_init
+Initializing Flash...
+
+flashfs[7]: 0 files, 1 directories
+flashfs[7]: 0 orphaned files, 0 orphaned directories
+flashfs[7]: Total bytes: 6784000
+flashfs[7]: Bytes used: 1024
+flashfs[7]: Bytes available: 6782976
+flashfs[7]: flashfs fsck took 1 seconds....done Initializing Flash.
+
+switch: [TX] SWITCH_IGNORE_STARTUP_CFG=1
+SWITCH_IGNORE_STARTUP_CFG=1
+
+switch: [TX] boot
+boot
+
+Getting rest of image
+Reading full image into memory...Check base package header ...: done = 16384
+Getting rest of image
+Reading full image into memory....done
+Reading full base package into memory...: done = 32792738
+Bundle Image
+--------------------------------------
+Kernel Address    : 0x537783c4
+Kernel Size       : 0x438356/4424534
+Initramfs Address : 0x53bb071a
+Initramfs Size    : 0x1ab5188/28004744
+Compression Format: mzip
+
+Bootable image at @ ram:0x537783c4
+Bootable image segment 0 address range [0x81100000, 0x81da5280] is in range [0x80180000, 0x90000000].
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@boot_system: 623
+Loading Linux kernel with entry point 0x81895bf0 ...
+Bootloader: Done loading app on core_mask: 0xf
+
+### Launching Linux Kernel (flags = 0x5)
+
+Linux version 4.9.187 (xelinux@sjc-xelinux3) (gcc version 5.3.0 (GCC) ) #1 SMP Wed Nov 4 12:00:14 PST 2020
+CVMSEG size: 2 cache lines (256 bytes)
+Cavium Inc. SDK-5.1.0
+bootconsole [early0] enabled
+CPU0 revision is: 000d900a (Cavium Octeon II)
+Checking for the multiply/shift bug... no.
+Checking for the daddiu bug... no.
+%IOSXEBOOT-ce3e6257432740b7a8f733bda404ab48-new_cksum: (rp/0): 4
+%IOSXEBOOT-ce3e6257432740b7a8f733bda404ab48-saved_cksum: (rp/0): 4
+
+Both links down, not waiting for other switches
+Switch number is 1
+
+              Restricted Rights Legend
+
+Use, duplication, or disclosure by the Government is
+subject to restrictions as set forth in subparagraph
+(c) of the Commercial Computer Software - Restricted
+Rights clause at FAR sec. 52.227-19 and subparagraph
+(c) (1) (ii) of the Rights in Technical Data and Computer
+Software clause at DFARS sec. 252.227-7013.
+
+           Cisco Systems, Inc.
+           170 West Tasman Drive
+           San Jose, California 95134-1706
+
+
+
+Cisco IOS Software [Gibraltar], Catalyst L3 Switch Software (CAT3K_CAA-UNIVERSALK9-M), Version 16.12.6, RELEASE SOFTWARE (fc3)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2021 by Cisco Systems, Inc.
+Compiled Sat 04-Sep-21 21:11 by mcpre
+
+
+This software version supports only Smart Licensing as the software licensing mechanism.
+
+
+PLEASE READ THE FOLLOWING TERMS CAREFULLY. INSTALLING THE LICENSE OR
+LICENSE KEY PROVIDED FOR ANY CISCO SOFTWARE PRODUCT, PRODUCT FEATURE,
+AND/OR SUBSEQUENTLY PROVIDED SOFTWARE FEATURES (COLLECTIVELY, THE
+"SOFTWARE"), AND/OR USING SUCH SOFTWARE CONSTITUTES YOUR FULL
+ACCEPTANCE OF THE FOLLOWING TERMS. YOU MUST NOT PROCEED FURTHER IF YOU
+ARE NOT WILLING TO BE BOUND BY ALL THE TERMS SET FORTH HEREIN.
+
+Your use of the Software is subject to the Cisco End User License Agreement
+(EULA) and any relevant supplemental terms (SEULA) found at
+http://www.cisco.com/c/en/us/about/legal/cloud-and-software/software-terms.html.
+
+You hereby acknowledge and agree that certain Software and/or features are
+licensed for a particular term, that the license to such Software and/or
+features is valid only for the applicable term and that such Software and/or
+features may be shut down or otherwise terminated by Cisco after expiration
+of the applicable license term (e.g., 90-day trial period). Cisco reserves
+the right to terminate any such Software feature electronically or by any
+other means available. While Cisco may provide alerts, it is your sole
+responsibility to monitor your usage of any such term Software feature to
+ensure that your systems and networks are prepared for a shutdown of the
+Software feature.
+
+
+
+
+FIPS: Flash Key Check : Begin
+FIPS: Flash Key Check : End, Not Found, FIPS Mode Not Enabled
+
+All TCP AO KDF Tests Pass
+cisco WS-C3650-24TS (MIPS) processor (revision P0) with 794882K/6147K bytes of memory.
+Processor board ID FDO2103E1WG
+2048K bytes of non-volatile configuration memory.
+4194304K bytes of physical memory.
+250456K bytes of Crash Files at crashinfo:.
+1609272K bytes of Flash at flash:.
+0K bytes of WebUI ODM Files at webui:.
+
+Base Ethernet MAC Address          : 2c:5a:0f:ae:75:80
+Motherboard Assembly Number        : 73-15898-06
+Motherboard Serial Number          : FDO2103064Y
+Model Revision Number              : P0
+Motherboard Revision Number        : A0
+Model Number                       : WS-C3650-24TS
+System Serial Number               : FDO2103E1WG
+
+
+
+
+Press RETURN to get started!
+
+
+*Dec 16 12:53:35.259: Rommon debug: debugFlagsStr[1], flags[0x1]
+*Dec 16 12:53:37.803: %SMART_LIC-6-EXPORT_CONTROLLED: Usage of export controlled features is not allowed
+*Dec 16 12:53:41.428: %SMART_LIC-6-AGENT_READY: Smart Agent for Licensing is initialized
+*Dec 16 12:53:41.431: %SMART_LIC-6-AGENT_ENABLED: Smart Agent for Licensing is enabled 
+*Dec 16 12:53:41.435: %SMART_LIC-6-EXPORT_CONTROLLED: Usage of export controlled features is not allowed
+*Dec 16 12:53:44.300: %SMART_LIC-6-HA_ROLE_CHANGED: Smart Agent HA role changed to Active.RA Tracing tool registry return: 0
+*Dec 16 12:53:54.352: %SPANTREE-5-EXTENDED_SYSID: Extended SysId enabled for type vlan
+*Dec 16 12:53:55.983: %LINK-3-UPDOWN: Interface Lsmpi18/3, changed state to up
+*Dec 16 12:53:55.986: %LINK-3-UPDOWN: Interface EOBC18/1, changed state to up
+*Dec 16 12:53:55.987: %LINK-3-UPDOWN: Interface GigabitEthernet0/0, changed state to down
+*Dec 16 12:53:55.987: %LINK-3-UPDOWN: Interface LIIN18/2, chan[TX] 
+ged state to up
+*Dec 16 12:53:56.343: %HMANRP-6-HMAN_IOS_CHANNEL_INFO: HMAN-IOS channel event for switch 1: EMP_RELAY: Channel UP!
+*Dec 16 12:53:56.356: %HMANRP-6-EMP_NO_ELECTION_INFO: Could not elect active EMP switch, setting emp active switch to 0: EMP_RELAY: Could not elect switch with mgmt port UP
+*Dec 16 12:53:15.567: %STACKMGR-6-STACK_LINK_CHANGE: Switch 1 R0/0: stack_mgr: Stack port 1 on Switch 1 is nocable
+*Dec 16 12:53:15.567: %STACKMGR-6-STACK_LINK_CHANGE: Switch 1 R0/0: stack_mgr: Stack port 2 on Switch 1 is down
+*Dec 16 12:53:15.567: %STACKMGR-6-STACK_LINK_CHANGE: Switch 1 R0/0: stack_mgr: Stack port 2 on Switch 1 is nocable
+*Dec 16 12:53:15.567: %STACKMGR-4-SWITCH_ADDED: Switch 1 R0/0: stack_mgr: Switch 1 has been added to the stack.
+*Dec 16 12:53:20.686: %STACKMGR-4-SWITCH_ADDED: Switch 1 R0/0: stack_mgr: Switch 1 has been added to the stack.
+*Dec 16 12:53:22.689: %STACKMGR-4-SWITCH_ADDED: Switch 1 R0/0: stack_mgr: Switch 1 has been added to the stack.
+*Dec 16 12:53:22.689: %STACKMGR-6-ACTIVE_ELECTED: Switch 1 R0/0: stack_mgr: Switch 1 has been elected ACTIVE.
+*Dec 16 12:53:56.372: %HMANRP-6-EMP_NO_ELECTION_INFO: Could not elect active EMP switch, setting emp active switch to 0: EMP_RELAY: Could not elect switch with mgmt port UP
+*Dec 16 12:53:57.084: %LINEPROTO-5-UPDOWN: Line protocol on Interface Lsmpi18/3, changed state to up
+*Dec 16 12:53:57.092: %LINEPROTO-5-UPDOWN: Line protocol on Interface EOBC18/1, changed state to up
+*Dec 16 12:53:57.092: %LINEPROTO-5-UPDOWN: Line protocol on Interface GigabitEthernet0/0, changed state to up
+*Dec 16 12:53:57.093: %LINEPROTO-5-UPDOWN: Line protocol on Interface LIIN18/2, changed state to up
+*Dec 16 12:53:58.301: %LINEPROTO-5-UPDOWN: Line protocol on Interface Vlan1, changed state to down
+*Dec 16 12:54:00.661: %SYS-6-STARTUP_CONFIG_IGNORED: System startup configuration is ignored based on the configuration register setting.
+*Dec 16 12:54:01.235: %SYS-5-CONFIG_P: Configured programmatically by process CPP MQC QoS Policy manager from console as vty2
+*Dec 16 12:54:01.410: %LINK-3-UPDOWN: Interface GigabitEthernet0/0, changed state to up
+*Dec 16 12:54:01.459: %IOSXE_MGMTVRF-3-AFI_ATTACH_FAIL: Management VRF AFI ipv6 attach failed
+*Dec 16 12:54:01.568: %SYS-5-CONFIG_P: Configured programmatically by process MGMT VRF Process from console as vty0
+*Dec 16 12:54:01.580: %IOSXE_MGMTVRF-6-CREATE_SUCCESS_INFO: Management vrf Mgmt-vrf created with ID 1, ipv4 table-id 0x1, ipv6 table-id 0x1E000001
+*Dec 16 12:54:01.583: %SYS-5-CONFIG_P: Configured programmatically by process MGMT VRF Process from console as vty0
+*Dec 16 12:54:02.716: %ONEP_BASE-6-SS_ENABLED: ONEP: Service set Base was enabled by Default
+*Dec 16 12:54:02.914: %SYS-5-RESTART: System restarted --
+Cisco IOS Software [Gibraltar], Catalyst L3 Switch Software (CAT3K_CAA-UNIVERSALK9-M), Version 16.12.6, RELEASE SOFTWARE (fc3)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2021 by Cisco Systems, Inc.
+Compiled Sat 04-Sep-21 21:11 by mcpre
+*Dec 16 12:54:03.148: %EVENT_TRACE-6-ENABLE: Trace already enabled.
+*Dec 16 12:54:03.149: %EVENT_TRACE-6-ENABLE: Trace already enabled.
+*Dec 16 12:54:03.149: %EVENT_TRACE-6-ENABLE: Trace already enabled.
+*Dec 16 12:54:03.149: %EVENT_TRACE-6-ENABLE: Trace already enabled.
+*Dec 16 12:54:04.906: %LINK-3-UPDOWN: Interface Vlan1, changed state to up
+*Dec 16 12:54:07.989: %LINK-3-UPDOWN: Interface GigabitEthernet0/0, changed state to down
+*Dec 16 12:54:08.062: %PLATFORM_PM-6-MODULE_INSERTED: SFP module inserted with interface name Gi1/1/1
+*Dec 16 12:54:08.111: %PLATFORM_PM-6-MODULE_INSERTED: SFP module inserted with interface name Gi1/1/2
+*Dec 16 12:54:08.480: %PNP-6-PNP_DISCOVERY_STOPPED: PnP Discovery stopped (Startup Config Present)
+Switch>
+*Dec 16 12:54:08.990: %LINEPROTO-5-UPDOWN: Line protocol on Interface GigabitEthernet0/0, changed state to down
+*Dec 16 12:54:11.380: %SYS-5-CONFIG_P: Configured programmatically by process EPM CREATE DEFAULT CWA URL ACL from console as console[TX] enable
+enable
+Switch#[TX] write erase
+write erase
+Erasing the nvram filesystem will remove all configuration files! Continue? [confirm][TX] 
+
+[OK]
+Erase of nvram: complete
+Switch#[TX] delete flash:vlan.dat
+delete flash:vlan.dat
+Delete filename [vlan.dat]? [TX] 
+
+Delete flash:/vlan.dat? [confirm][TX] 
+
+
+*Dec 16 12:54:14.143: %SYS-7-NV_BLOCK_INIT: Initialized the geometry of nvram
+*Dec 16 12:54:14.590: %PKI-2-NON_AUTHORITATIVE_CLOCK: PKI functions can not be initialized until an authoritative time source, like NTP, can be obtained.
+*Dec 16 12:54:14.623: %PKI-6-TRUSTPOINT_CREATE: Trustpoint: CISCO_IDEVID_SUDI_LEGACY created succesfully
+*Dec 16 12:54:14.665: %CRYPTO_ENGINE-5-KEY_ADDITION: A key named CISCO_IDEVID_SUDI_LEGACY has been generated or imported by pki-sudi
+*Dec 16 12:54:14.771: %PKI-6-TRUSTPOINT_CREATE: Trustpoint: CISCO_IDEVID_SUDI_LEGACY0 created succesfully
+*Dec 16 12:54:14.785: %PKI-6-TRUSTPOINT_CREATE: Trustpoint: CISCO_IDEVID_SUDI created succesfully
+Switch#[TX] enable
+enable
+Switch#[TX] tclsh
+tclsh
+Switch(tcl)#[TX] foreach f [glob flash:/*] { \
+foreach f [glob flash:/*] { \
++>[TX] set fname [file tail $f]; set ext [file extension $f]; \
+set fname [file tail $f]; set ext
+*Dec 16 12:54:14.822: %CRYPTO_ENGINE-5-KEY_ADDITION: A key named CISCO_IDEVID_SUDI has been generated or imported by pki-sudi [file extension $f]; \
++>[TX] if {[string match "c*universal*" $fname] || [string match "cat*universal*" $fname] || [string match ".E*" $ext] || [string match "cat" $fname] || [string match ".pkg" $ext] || ([string match "package*" $fname] && [string match ".conf" $ext])} { \
+if {[string match "c*universal*" $fname] || [string match "cat*universal*" $ match "c*universal*" $fname] || [string match "cat*universal*" $         fname] ||universal*" $fname] || [string match "cat*universal*" $fname] ||          [string m" $fname] || [string match "cat*universal*" $fname] || [string ma         tch ".E*"|| [string match "cat*universal*" $fname] || [string match ".E*"          $ext] ||  match "cat*universal*" $fname] || [string match ".E*" $ext] || [         string mat*universal*" $fname] || [string match ".E*" $ext] || [string mat         ch "cat" l*" $fname] || [string match ".E*" $ext] || [string match "cat" $         fname] ||] || [string match ".E*" $ext] || [string match "cat" $fname] ||          [string mng match ".E*" $ext] || [string match "cat" $fname] || [string ma         tch ".pkg.E*" $ext] || [string match "cat" $fname] || [string match ".pkg"          $ext] || || [string match "cat" $fname] || [string match ".pkg" $ext] ||          ([string g match "cat" $fname] || [string match ".pkg" $ext] || ([string m         atch "pacat" $fname] || [string match ".pkg" $ext] || ([string match "pack         age*" $fn] || [string match ".pkg" $ext] || ([string match "package*" $fna         me] && [sng match ".pkg" $ext] || ([string match "package*" $fname] && [st         ring matc.pkg" $ext] || ([string match "package*" $fname] && [string match          ".conf" ] || ([string match "package*" $fname] && [string match ".conf" $         ext])} { ing match "package*" $fname] && [string match ".conf" $ext])} { \         
++>
+*Dec 16 12[TX] puts "Skipping possible IOS image: $fname"; continue }; \
+:54:15.035: %PKI-6-TRUSTPOINT_CREATE: Trustpoint: CISCO_IDEVID_SUDI0 created succesfully
+*Dec 16 12:54:15.045: %IOSXE_INFRA-6-PROCPATH_CLIENT_HOG: IOS shim client 'pkissl reader mqipc' has taken 260 msec (runtime: 251 msec) to process a 'unknown' messageputs "Skipping possible IOS image: $fname"; continue }; \
++>[TX] puts "Deleting file/dir: $fname"; exec delete /force /recursive $f }
+puts "Deleting file/dir: $fname"; exec delete /force /recursive $f }
+Deleting file/dir: pnp-tech-time
+Deleting file/dir: pnp-tech-discovery-summary
+Deleting file/dir: boothelper.old
+Deleting file/dir: boothelper.log
+Skipping possible IOS image: packages.conf
+Deleting file/dir: dc_profile_dir
+Deleting file/dir: nvram_config
+Deleting file/dir: core
+Deleting file/dir: vman_fdb
+Deleting file/dir: memleak.tcl
+Deleting file/dir: networker_20220423_071923.txt
+Deleting file/dir: bootloader_evt_handle.log
+Deleting file/dir: onep
+Skipping possible IOS image: cat3k_caa-guestshell.16.12.06.SPA.pkg
+Skipping possible IOS image: cat3k_caa-rpbase.16.12.06.SPA.pkg
+Skipping possible IOS image: cat3k_caa-webui.16.12.06.SPA.pkg
+Deleting file/dir: virtual-instance
+Deleting file/dir: wnweb_store
+Deleting file/dir: ROLLBACK
+Skipping possible IOS image: cat3k_caa-rpcore.16.12.06.SPA.pkg
+Skipping possible IOS image: cat3k_caa-srdriver.16.12.06.SPA.pkg
+Deleting file/dir: gs_script
+Deleting file/dir: tech_support
+Deleting file/dir: rdope_out.txt
+Deleting file/dir: rdope.log
+Deleting file/dir: nvram_config_bkup
+
+Switch(tcl)#[TX] tclquit
+tclquit
+Switch#[SYSTEM] Workflow completed successfully
+
+=================================================
+Workflow Ended: 2025-12-16 13:17:39
+Status: SUCCESS
+=================================================

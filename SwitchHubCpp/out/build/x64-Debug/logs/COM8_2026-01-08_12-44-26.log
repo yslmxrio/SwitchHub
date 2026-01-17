@@ -1,0 +1,64 @@
+=================================================
+SwitchHub Workflow Log
+=================================================
+Port:      COM8
+Asset ID:  (not set)
+Workflow:  HP JG937A Firmware Factory Reset
+Started:   2026-01-08 12:44:26
+=================================================
+
+[SYSTEM] Workflow 'HP JG937A Firmware Factory Reset' started on COM8 @ 9600 baud
+[SYSTEM] Starting Interrupt Sequence: 
+
+Starting......
+Press Ctrl+D to access BASIC BOOT MENU
+
+********************************************************************************
+*                                                                              *
+*        HPE 5130-48G-PoE+-4SFP+ (370W) EI Switch BOOTROM, Version 145         *
+*                                                                              *
+********************************************************************************
+Copyright (c) 2010-2016 Hewlett Packard Enterprise Development LP
+
+Creation Date       : May 30 2016, 10:19:57
+CPU Clock Speed     : 1000MHz
+Memory Size         : 1024MB
+Flash Size          : 512MB
+CPLD Version        : 002
+PCB Version         : Ver.B
+Mac Address         : d894039157f2
+
+
+Press Ctrl+B to access EXTENDED BOOT MENU...1 0 0
+
+Password recovery capability is enabled.
+
+   EXTENDED BOOT MENU
+
+1. Download image to flash
+2. Select image to boot
+3. Display all files in flash
+4. Delete file from flash
+5. Restore to factory default configuration
+6. Enter BootRom upgrade menu
+7. Skip current system configuration
+8. Set switch startup mode
+0. Reboot
+Ctrl+Z: Access EXTENDED ASSISTANT MENU
+Ctrl+F: Format file system
+Ctrl+P: Change authentication for console login
+Ctrl+R: Download image to SDRAM and run
+Ctrl+C: Display Copyright
+
+Enter your choice(0-8): 
+[SUCCESS] Interrupt matched target prompt.
+[TX] 7
+7
+The current setting will run with current configuration file when reboot.
+Are you sure you want to skip current configuration file when reboot? Yes or No
+(Y/N):[ERROR] Critical Failure: Timeout waiting for: (Y/N):
+
+=================================================
+Workflow Ended: 2026-01-08 12:45:58
+Status: FAILED
+=================================================

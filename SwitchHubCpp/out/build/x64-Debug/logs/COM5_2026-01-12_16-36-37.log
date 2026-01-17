@@ -1,0 +1,273 @@
+=================================================
+SwitchHub Workflow Log
+=================================================
+Port:      COM5
+Asset ID:  (not set)
+Workflow:  HP JG937A Firmware Factory Reset
+Started:   2026-01-12 16:36:37
+=================================================
+
+[SYSTEM] Workflow 'HP JG937A Firmware Factory Reset' started on COM5 @ 9600 baud
+[SYSTEM] Starting Interrupt Sequence: 
+
+Starting......
+Press Ctrl+D to access BASIC BOOT MENU
+
+********************************************************************************
+*                                                                              *
+*        HPE 5130-48G-PoE+-4SFP+ (370W) EI Switch BOOTROM, Version 145         *
+*                                                                              *
+********************************************************************************
+Copyright (c) 2010-2016 Hewlett Packard Enterprise Development LP
+
+Creation Date       : May 30 2016, 10:19:57
+CPU Clock Speed     : 1000MHz
+Memory Size         : 1024MB
+Flash Size          : 512MB
+CPLD Version        : 002
+PCB Version         : Ver.B
+Mac Address         : d894039157f2
+
+
+Press Ctrl+B to access EXTENDED BOOT MENU...1 0 0
+
+Password recovery capability is enabled.
+
+   EXTENDED BOOT MENU
+
+1. Download image to flash
+2. Select image to boot
+3. Display all files in flash
+4. Delete file from flash
+5. Restore to factory default configuration
+6. Enter BootRom upgrade menu
+7. Skip current system configuration
+8. Set switch startup mode
+0. Reboot
+Ctrl+Z: Access EXTENDED ASSISTANT MENU
+Ctrl+F: Format file system
+Ctrl+P: Change authentication for console login
+Ctrl+R: Download image to SDRAM and run
+Ctrl+C: Display Copyright
+
+Enter your choice(0-8): 
+[SUCCESS] Interrupt matched target prompt.
+[TX] 7
+7
+The current setting will run with current configuration file when reboot.
+Are you sure you want to skip current configuration file when reboot? Yes or No
+(Y/N):[TX] Y
+Y
+Setting...Done.
+
+   EXTENDED BOOT MENU
+
+1. Download image to flash
+2. Select image to boot
+3. Display all files in flash
+4. Delete file from flash
+5. Restore to factory default configuration
+6. Enter BootRom upgrade menu
+7. Skip current system configuration
+8. Set switch startup mode
+0. Reboot
+Ctrl+Z: Access EXTENDED ASSISTANT MENU
+Ctrl+F: Format file system
+Ctrl+P: Change authentication for console login
+Ctrl+R: Download image to SDRAM and run
+Ctrl+C: Display Copyright
+
+Enter your choice(0-8): 
+
+   EXTENDED BOOT MENU
+
+1. Download image to flash
+2. Select image to boot
+3. Display all files in flash
+4. Delete file from flash
+5. Restore to factory default configuration
+6. Enter BootRom upgrade menu
+7. Skip current system configuration
+8. Set switch startup mode
+0. Reboot
+Ctrl+Z: Access EXTENDED ASSISTANT MENU
+Ctrl+F: Format file system
+Ctrl+P: Change authentication for console login
+Ctrl+R: Download image to SDRAM and run
+Ctrl+C: Display Copyright
+[TX] 0
+
+Enter your choice(0-8): 0
+Starting......
+Press Ctrl+D to access BASIC BOOT MENU
+
+********************************************************************************
+*                                                                              *
+*        HPE 5130-48G-PoE+-4SFP+ (370W) EI Switch BOOTROM, Version 145         *
+*                                                                              *
+********************************************************************************
+Copyright (c) 2010-2016 Hewlett Packard Enterprise Development LP
+
+Creation Date       : May 30 2016, 10:19:57
+CPU Clock Speed     : 1000MHz
+Memory Size         : 1024MB
+Flash Size          : 512MB
+CPLD Version        : 002
+PCB Version         : Ver.B
+Mac Address         : d894039157f2
+
+
+Press Ctrl+B to access EXTENDED BOOT MENU...1 0 0
+Loading the main image files...
+Loading file flash:/5130ei-cmw710-system-r3113p05.bin...........................
+..................................Done.
+Loading file flash:/5130ei-cmw710-boot-r3113p05.bin............Done.
+
+Image file flash:/5130ei-cmw710-boot-r3113p05.bin is self-decompressing.........
+................................................................................
+................................................................................
+................................................................................
+................................................................................
+................................................................................
+................................................................................
+................................................................................
+................................................................................
+................................................................................
+................................................................................
+................................................................................
+....Done.
+System is starting...
+Cryptographic algorithms tests passed.
+Configuration file is skipped.
+Started automatic configuration, press CTRL_C or CTRL_D to break.
+[TX] 
+
+Automatic configuration attempt: 1.
+Not ready for automatic configuration: no interface available.
+Waiting for the next...
+Automatic configuration is aborted.
+Line aux0 is available.
+
+
+Press ENTER to get started.
+[TX] 
+
+<HPE>[TX] undo terminal monitor
+undo terminal monitor
+The current terminal is disabled to display logs.
+<HPE>[TX] cd flash:/
+cd flash:/
+<HPE>[PARSE_DELETE] Starting dynamic file deletion
+[PARSE_DELETE] Scanning: flash:/
+[TX] dir flash:/
+dir flash:/
+Directory of flash:
+   0 -rw-     9459712 Aug 08 2008 20:00:00   5130ei-cmw710-boot-r3113p05.bin
+   1 -rw-    61349888 Aug 08 2008 20:00:00   5130ei-cmw710-system-r3113p05.bin
+   2 drw-           - Jan 01 2013 00:00:43   diagfile
+   3 -rw-        1311 Jan 01 2013 00:01:59   hostkey
+   4 -rw-        2981 Oct 12 2013 06:11:07   ifindex.dat
+   5 drw-           - Jan 01 2013 00:00:48   license
+   6 drw-           - Jan 02 2013 00:00:37   logfile
+   7 -rw-       13807 Nov 02 2014 22:49:33   newswitchconfig.cfg
+   8 drw-           - Jan 01 2013 00:02:02   pki
+   9 drw-           - Jan 01 2013 00:00:43   seclog
+  10 drw-           - Jan 01 2013 00:00:54   versionInfo
+
+524288 KB total (443660 KB free)
+
+<HPE>[PARSER] Found: 5130ei-cmw710-boot-r3113p05.bin FILE
+[PARSER] Found: 5130ei-cmw710-system-r3113p05.bin FILE
+[PARSER] Found: diagfile DIR
+[PARSER] Found: hostkey FILE
+[PARSER] Found: ifindex.dat FILE
+[PARSER] Found: license DIR
+[PARSER] Found: logfile DIR
+[PARSER] Found: newswitchconfig.cfg FILE
+[PARSER] Found: pki DIR
+[PARSER] Found: seclog DIR
+[PARSER] Found: versionInfo DIR
+[PARSE_DELETE] Found 11 total entries
+[PRESERVE] Extension match: 5130ei-cmw710-boot-r3113p05.bin (.bin)
+[PRESERVE] Extension match: 5130ei-cmw710-system-r3113p05.bin (.bin)
+[PARSE_DELETE] Will delete directory: diagfile
+[PARSE_DELETE] Will delete file: hostkey
+[PARSE_DELETE] Will delete file: ifindex.dat
+[PRESERVE] Directory: license
+[PARSE_DELETE] Will delete directory: logfile
+[PARSE_DELETE] Will delete file: newswitchconfig.cfg
+[PRESERVE] Directory: pki
+[PARSE_DELETE] Will delete directory: seclog
+[PRESERVE] Directory: versionInfo
+[PARSE_DELETE] Selected 6 entries for deletion
+[DELETE] Executing: rmdir flash:/diagfile
+[TX] rmdir flash:/diagfile
+rmdir flash:/diagfile
+Remove directory flash:/diagfile and the files in the recycle-bin under this directory will be deleted permanently. Continue?[Y/N]:[CONFIRM] Sending 'y' to confirm deletion
+[TX] y
+y
+Removing directory flash:/diagfile... Done.
+<HPE>[SUCCESS] Deleted: diagfile
+[DELETE] Executing: delete /unreserved flash:/hostkey
+[TX] delete /unreserved flash:/hostkey
+delete /unreserved flash:/hostkey
+The file cannot be restored. Delete flash:/hostkey?[Y/N]:[CONFIRM] Sending 'y' to confirm deletion
+[TX] y
+y
+Deleting the file permanently will take a long time. Please wait...
+Deleting file flash:/hostkey... Done.
+<HPE>[SUCCESS] Deleted: hostkey
+[DELETE] Executing: delete /unreserved flash:/ifindex.dat
+[TX] delete /unreserved flash:/ifindex.dat
+delete /unreserved flash:/ifindex.dat
+The file cannot be restored. Delete flash:/ifindex.dat?[Y/N]:[CONFIRM] Sending 'y' to confirm deletion
+[TX] y
+y
+Deleting the file permanently will take a long time. Please wait...
+Deleting file flash:/ifindex.dat... Done.
+<HPE>[SUCCESS] Deleted: ifindex.dat
+[DELETE] Executing: rmdir flash:/logfile
+[TX] rmdir flash:/logfile
+rmdir flash:/logfile
+Remove directory flash:/logfile and the files in the recycle-bin under this directory will be deleted permanently. Continue?[Y/N]:[CONFIRM] Sending 'y' to confirm deletion
+[TX] y
+y
+Failed to remove the directory because it is not empty.
+<HPE>[SUCCESS] Deleted: logfile
+[DELETE] Executing: delete /unreserved flash:/newswitchconfig.cfg
+[TX] delete /unreserved flash:/newswitchconfig.cfg
+delete /unreserved flash:/newswitchconfig.cfg
+The file cannot be restored. Delete flash:/newswitchconfig.cfg?[Y/N]:[CONFIRM] Sending 'y' to confirm deletion
+[TX] y
+y
+Deleting the file permanently will take a long time. Please wait...
+Deleting file flash:/newswitchconfig.cfg... Done.
+<HPE>[SUCCESS] Deleted: newswitchconfig.cfg
+[DELETE] Executing: rmdir flash:/seclog
+[TX] rmdir flash:/seclog
+rmdir flash:/seclog
+Remove directory flash:/seclog and the files in the recycle-bin under this directory will be deleted permanently. Continue?[Y/N]:[CONFIRM] Sending 'y' to confirm deletion
+[TX] y
+y
+Removing directory flash:/seclog... Done.
+<HPE>[SUCCESS] Deleted: seclog
+[PARSE_DELETE] Completed: 6 deleted, 0 failed
+[TX] dir
+dir
+Directory of flash:
+   0 -rw-     9459712 Aug 08 2008 20:00:00   5130ei-cmw710-boot-r3113p05.bin
+   1 -rw-    61349888 Aug 08 2008 20:00:00   5130ei-cmw710-system-r3113p05.bin
+   2 drw-           - Jan 01 2013 00:00:48   license
+   3 drw-           - Jan 02 2013 00:00:37   logfile
+   4 drw-           - Jan 01 2013 00:02:02   pki
+   5 drw-           - Jan 01 2013 00:00:54   versionInfo
+
+524288 KB total (443688 KB free)
+
+<HPE>[OPTIONAL] Step failed but marked as optional, continuing
+[SYSTEM] Workflow completed successfully
+
+=================================================
+Workflow Ended: 2026-01-12 16:40:02
+Status: SUCCESS
+=================================================

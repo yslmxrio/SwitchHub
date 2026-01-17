@@ -1,0 +1,17 @@
+=================================================
+SwitchHub Workflow Log
+=================================================
+Port:      COM5
+Asset ID:  (not set)
+Workflow:  Dell 5548P Corrected Scrub
+Started:   2026-01-02 13:09:44
+=================================================
+
+[SYSTEM] Workflow 'Dell 5548P Corrected Scrub' started on COM5 @ 9600 baud
+[SYSTEM] Starting Interrupt Sequence: 
+[SYSTEM] Workflow interrupted by user
+
+=================================================
+Workflow Ended: 2026-01-02 13:09:54
+Status: INTERRUPTED BY USER
+=================================================

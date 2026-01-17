@@ -1,0 +1,10 @@
+=================================================
+SwitchHub Workflow Log
+=================================================
+Port:      COM3
+Asset ID:  (not set)
+Workflow:  Cisco 2960x/3750x Factory Reset (MODE) ALTERNATE
+Started:   2026-01-16 15:38:26
+=================================================
+
+[SYSTEM] Workflow 'Cisco 2960x/3750x Factory Reset (MODE) ALTERNATE' started on COM3 @ 9600 baud

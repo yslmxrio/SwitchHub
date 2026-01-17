@@ -1,0 +1,36 @@
+=================================================
+SwitchHub Workflow Log
+=================================================
+Port:      COM8
+Asset ID:  (not set)
+Workflow:  Manual Override
+Started:   2026-01-08 13:33:50
+=================================================
+
+[SYSTEM] Workflow 'Manual Override' started on COM8 @ 9600 baud
+[TX]  
+                 sha256sum           Compute the hash digest of a file using the SHA256 
+                      algorithm
+  ssh2                Establish an Stelnet connection to an Stelnet server
+  startup             Specify system startup parameters
+  super               Switch to a user role
+  system-view         Enter the System View
+  tar                 Archive management
+  tclquit             Exit from TCL shell
+  tclsh               Enter the TCL shell
+  telnet              Establish a telnet connection
+  terminal            Set the terminal line characteristics
+  tftp                Open a TFTP connection
+  tracert             Tracert function
+  undelete            Recover a deleted file
+  undo                Cancel current setting
+  web                 Web configuration
+  xml                 Enter XML view
+
+<HPE-tcl>
+<HPE-tcl>[SYSTEM] Workflow completed successfully
+
+=================================================
+Workflow Ended: 2026-01-08 13:33:52
+Status: SUCCESS
+=================================================

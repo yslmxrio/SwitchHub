@@ -1,0 +1,17 @@
+=================================================
+SwitchHub Workflow Log
+=================================================
+Port:      COM3
+Asset ID:  (not set)
+Workflow:  Aruba AccessPoint 535
+Started:   2026-01-02 13:10:02
+=================================================
+
+[SYSTEM] Workflow 'Aruba AccessPoint 535' started on COM3 @ 9600 baud
+[SYSTEM] Starting Interrupt Sequence: 
+[SYSTEM] Workflow interrupted by user
+
+=================================================
+Workflow Ended: 2026-01-02 13:10:04
+Status: INTERRUPTED BY USER
+=================================================

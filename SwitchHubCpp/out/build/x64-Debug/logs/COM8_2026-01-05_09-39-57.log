@@ -1,0 +1,124 @@
+=================================================
+SwitchHub Workflow Log
+=================================================
+Port:      COM8
+Asset ID:  (not set)
+Workflow:  HP / Aruba 2930F Firmware Factory Reset
+Started:   2026-01-05 09:39:57
+=================================================
+
+[SYSTEM] Workflow 'HP / Aruba 2930F Firmware Factory Reset' started on COM8 @ 9600 baud
+
+I01D
+M433
+ROM information:
+   Build directory: /ws/swbuildm/lavarom_qaoff/rom/build/lavarom(swbuildm_lavarom_qaoff_rel_lavarom_s)
+   Build date:      Sep 23 2016
+   Build time:      11:43:27
+   Build version:   WC.16.01.0003
+   Build number:    32832
+
+[?7h
+
+Boot Profiles:
+
+0. Monitor ROM Console
+1. Primary Software Image   [WC.16.03.0005]
+2. Secondary Software Image [WC.16.03.0005]
+
+Select profile (primary): [TX] 0
+0
+ 
+
+ System ID Information
+
+  System Description  : 2930F-24G-4SFP+ Switch (JL253A)
+  Serial Number       : CN87HKT0YY 
+  Base MAC Address    : 089734-9bd960 (32)
+  ROM Version         : WC.16.01.0003 (build 32832)
+  ROM Build Directory : /ws/swbuildm/lavarom_qaoff/rom/build/lavarom(swbuildm_lavarom_qaoff_rel_lavarom_s)
+  ROM Build Date      : Sep 23 2016 11:43:27
+  ROM Image Booted    : Primary
+  Initial ROM Version : WC.16.01.0003
+  Config ROM Version  : 1.4
+  Main Board          : ID 0x12, rev 3
+  PLD Versions        : 12
+
+ 
+(C) Copyright 2016 Hewlett Packard Enterprise Development LP
+
+                  RESTRICTED RIGHTS LEGEND
+ Confidential computer software. Valid license from Hewlett Packard
+ Enterprise Development LP required for possession, use or copying.
+ Consistent with FAR 12.211 and 12.212, Commercial Computer Software,
+ Computer Software Documentation, and Technical Data for Commercial items are
+ licensed to the U.S. Government under vendor's standard commercial license.
+
+Enter h or ? for help.
+
+=>
+=>[TX] erase-all zeroize
+erase-all zeroize
+
+The system will boot to the last-booted software image and all management
+module files except software images will be erased and zeroized. This will
+take up to 60 minutes and the switch will not be usable during that time.
+Continue (y/n)? [TX] y
+y
+[?7h
+
+Booting Primary Software Image...
+
+    -------------------------------------------------
+    Module          : MM
+    Device          : INITROM
+    Running Version : WC.16.01.0003*
+    Image Version   : WC.16.01.0002
+    Image Name      : WC_16_01_0002_lavirombase.dl
+    Image Date      : Mon Jun 13 19:20:19 2016
+    -------------------------------------------------
+
+Decompressing...done.
+
+
+
+initializing.
+Crypto powerup selftests started...
+DRBG KAT...passed.
+SHA1 KAT...passed.
+SHA256 KAT...passed.
+SHA512 KAT...passed.
+HMAC_SHA1 KAT...passed.
+3DES KAT...passed.
+AES KAT...passed.
+DSA PCT...passed.
+DSA2 PCT...passed.
+RSA KAT...passed.
+RSA_2048 KAT...passed.
+ECDSA PCT...passed.
+Crypto powerup selftests all passed.
+
+
+ATTENTION: Zeroization has started and will take up to 60 minutes.
+           Interrupting this process may cause the switch
+           to become unusable.
+
+Backing up firmware images and other system files...
+Zeroizing the file system...   0%  1%  2%  3%  4%  5%  6%  7%  8%  9% 10% 11% 12% 13% 14% 15% 16% 17% 18% 19% 20% 21% 22% 23% 24% 25% 26% 27% 28% 29% 30% 31% 32% 33% 34% 35% 36% 37% 38% 39% 40% 41% 42% 43% 44% 45% 46% 47% 48% 49% 50% 51% 52% 53% 54% 55% 56% 57% 58% 59% 60% 61% 62% 63% 64% 65% 66% 67% 68% 69% 70% 71% 72% 73% 74% 75% 76% 77% 78% 79% 80% 81% 82% 83% 84% 85% 86% 87% 88% 89% 90% 91% 92% 93% 94% 95% 96% 97% 98% 99%100%100%
+Verifying cleanness of the file system...   0%  1%  2%  3%  4%  5%  6%  7%  8%  9% 10% 11% 12% 13% 14% 15% 16% 17% 18% 19% 20% 21% 22% 23% 24% 25% 26% 27% 28% 29% 30% 31% 32% 33% 34% 35% 36% 37% 38% 39% 40% 41% 42% 43% 44% 45% 46% 47% 48% 49% 50% 51% 52% 53% 54% 55% 56% 57% 58% 59% 60% 61% 62% 63% 64% 65% 66% 67% 68% 69% 70% 71% 72% 73% 74% 75% 76% 77% 78% 79% 80% 81% 82% 83% 84% 85% 86% 87% 88% 89% 90% 91% 92% 93% 94% 95% 96% 97% 98% 99%100%100%
+Restoring firmware images and other system files...
+Zeroization of the file system completed.
+Continue initializing...initialization done.
+
+
+Decompressing...done.
+
+
+Waiting for Speed Sense.  Press <Enter> twice to continue.
+
+[ERROR] Critical Failure: Timeout waiting for: Press any key to continue
+
+=================================================
+Workflow Ended: 2026-01-05 09:53:04
+Status: FAILED
+=================================================

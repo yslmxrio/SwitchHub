@@ -1,0 +1,53 @@
+=================================================
+SwitchHub Workflow Log
+=================================================
+Port:      COM5
+Asset ID:  (not set)
+Workflow:  Cisco Catalyst 3850 (IOS-XE) Recovery (MODE)
+Started:   2025-12-16 15:40:56
+=================================================
+
+[SYSTEM] Workflow 'Cisco Catalyst 3850 (IOS-XE) Recovery (MODE)' started on COM5 @ 9600 baud
+
+Interface GE 0 link down***ERROR: PHY link is down
+The "IP_ADDR" environment variable is not set.
+
+The system is about to execute the autoboot command.
+
+Interrupt the system within 5 seconds to intervene.
+
+
+Getting rest of image
+Reading full image into memory...Check base package header ...: done = 16384
+Getting rest of image
+Reading full image into memory....done
+Reading full base package into memory...: done = 32792738
+Bundle Image
+--------------------------------------
+Kernel Address    : 0x537783c4
+Kernel Size       : 0x438356/4424534
+Initramfs Address : 0x53bb071a
+Initramfs Size    : 0x1ab5188/28004744
+Compression Format: mzip
+
+Bootable image at @ ram:0x537783c4
+Bootable image segment 0 address range [0x81100000, 0x81da5280] is in range [0x80180000, 0x90000000].
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@boot_system: 623
+Loading Linux kernel with entry point 0x81895bf0 ...
+Bootloader: Done loading app on core_mask: 0xf
+
+### Launching Linux Kernel (flags = 0x5)
+
+Linux version 4.9.187 (xelinux@sjc-xelinux3) (gcc version 5.3.0 (GCC) ) #1 SMP Wed Nov 4 12:00:14 PST 2020
+CVMSEG size: 2 cache lines (256 bytes)
+Cavium Inc. SDK-5.1.0
+bootconsole [early0] enabled
+CPU0 revision is: 000d900a (Cavium Octeon II)
+Checking for the multiply/shift bug... no.
+Checking for the daddiu bug... no.
+[SYSTEM] Workflow interrupted by user
+
+=================================================
+Workflow Ended: 2025-12-16 15:43:03
+Status: INTERRUPTED BY USER
+=================================================

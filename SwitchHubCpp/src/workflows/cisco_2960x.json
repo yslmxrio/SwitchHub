@@ -1,0 +1,140 @@
+{
+  "name": "Cisco 2960x/3750x Factory Reset (MODE)",
+  "description": "Full destructive reset. Wipes config, vlan.dat, and cleans flash. Requires physical MODE button press.",
+  "steps": [
+    {
+      "name": "Waiting for MODE button",
+      "status": "Waiting for user (Press MODE button)",
+      "require_physical_interact": true,
+      "command": null,
+      "expect": "switch:",
+      "timeout": 240
+    },
+    {
+      "name": "Initializing Flash",
+      "status": "Initializing Flash",
+      "command": "flash_init",
+      "expect": "switch:",
+      "timeout": 30
+    },
+    {
+      "name": "Deleting config.text",
+      "status": "Deleting config.text",
+      "command": "delete flash:/config.text",
+      "expect": "(y/n)",
+      "timeout": 10
+    },
+    {
+      "name": "Confirming config.text delete",
+      "status": "Confirming delete",
+      "command": "y",
+      "expect": "switch:",
+      "timeout": 10
+    },
+    {
+      "name": "Deleting private-config.text",
+      "status": "Deleting private-config.text",
+      "command": "delete flash:/private-config.text",
+      "expect": "(y/n)",
+      "timeout": 10
+    },
+    {
+      "name": "Confirming private-config delete",
+      "status": "Confirming delete",
+      "command": "y",
+      "expect": "switch:",
+      "timeout": 10
+    },
+    {
+      "name": "Deleting vlan.dat",
+      "status": "Deleting vlan.dat",
+      "command": "delete flash:/vlan.dat",
+      "expect": "(y/n)",
+      "timeout": 10
+    },
+    {
+      "name": "Confirming vlan.dat delete",
+      "status": "Confirming delete",
+      "command": "y",
+      "expect": "switch:",
+      "timeout": 10
+    },
+    {
+      "name": "Rebooting switch",
+      "status": "Rebooting (this may take 5 min)",
+      "command": "boot",
+      "expect": "(Would you like to enter the initial configuration dialog|Switch>)",
+      "timeout": 300
+    },
+    {
+      "name": "Exiting initial config",
+      "status": "Finalizing setup",
+      "command": "no",
+      "expect": "Switch>",
+      "timeout": 60
+    },
+    {
+      "name": "Entering Privileged Mode",
+      "status": "Finalizing setup",
+      "command": "enable",
+      "expect": "Switch#",
+      "timeout": 10
+    },
+    {
+      "name": "Entering Tcl shell",
+      "status": "Cleaning flash (Tcl)",
+      "command": "tclsh",
+      "expect": "Switch\\(tcl\\)#",
+      "timeout": 10
+    },
+    {
+      "name": "Tcl: Starting loop",
+      "status": "Cleaning flash (Tcl)",
+      "command": "foreach f [glob flash:/*] { \\",
+      "expect": "\\+>",
+      "timeout": 10
+    },
+    {
+      "name": "Tcl: Setting vars",
+      "status": "Cleaning flash (Tcl)",
+      "command": "set fname [file tail $f]; set ext [file extension $f]; \\",
+      "expect": "\\+>",
+      "timeout": 10
+    },
+    {
+      "name": "Tcl: If block",
+      "status": "Cleaning flash (Tcl)",
+      "command": "if {[string match \"c*universal*\" $fname] || [string match \"cat*universal*\" $fname] || [string match \".E*\" $ext] || ([string match \"package*\" $fname] && [string match \".conf\" $ext])} { \\",
+      "expect": "\\+>",
+      "timeout": 10
+    },
+    {
+      "name": "Tcl: Skip logic",
+      "status": "Cleaning flash (Tcl)",
+      "command": "puts \"Skipping possible IOS image: $fname\"; continue }; \\",
+      "expect": "\\+>",
+      "timeout": 10
+    },
+    {
+      "name": "Tcl: Delete logic",
+      "status": "Cleaning flash (Tcl)",
+      "command": "puts \"Deleting file/dir: $fname\"; exec delete /force /recursive $f }",
+      "expect": "Switch\\(tcl\\)#",
+      "timeout": 120
+    },
+    {
+      "name": "Exiting Tcl shell",
+      "status": "Finalizing cleanup",
+      "command": "tclquit",
+      "expect": "Switch#",
+      "timeout": 10
+    },
+    {
+      "name": "Workflow Complete",
+      "status": "Successfully Finished",
+      "command": null,
+      "expect": null,
+      "timeout": 0
+    }
+  ]
+}

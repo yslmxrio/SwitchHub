@@ -1,0 +1,36 @@
+=================================================
+SwitchHub Workflow Log
+=================================================
+Port:      COM5
+Asset ID:  LUCASASSETID
+Workflow:  HP JG937A Firmware Factory Reset
+Started:   2026-01-13 09:19:27
+=================================================
+
+[SYSTEM] Workflow 'HP JG937A Firmware Factory Reset' started on COM5 @ 9600 baud
+[SYSTEM] Starting Interrupt Sequence: 
+
+Starting......
+Press Ctrl+D to access BASIC BOOT MENU
+
+********************************************************************************
+*                                                                              *
+*        HPE 5130-48G-PoE+-4SFP+ (370W) EI Switch BOOTROM, Version 145         *
+*                                                                              *
+********************************************************************************
+Copyright (c) 2010-2016 Hewlett Packard Enterprise Development LP
+
+Creation Date       : May 30 2016, 10:19:57
+CPU Clock Speed     : 1000MHz
+Memory Size         : 1024MB
+Flash Size          : 512MB
+CPLD Version        : 002
+PCB Version         : Ver.B
+Mac Address         : d894039157f2
+
+[SYSTEM] Workflow interrupted by user
+
+=================================================
+Workflow Ended: 2026-01-13 09:19:43
+Status: INTERRUPTED BY USER
+=================================================

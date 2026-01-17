@@ -1,0 +1,36 @@
+=================================================
+SwitchHub Workflow Log
+=================================================
+Port:      COM5
+Asset ID:  LUCASASSETID
+Workflow:  Manual Command
+Started:   2026-01-13 09:22:14
+=================================================
+
+[SYSTEM] Workflow 'Manual Command' started on COM5 @ 9600 baud
+[TX] y
+
+
+   EXTENDED BOOT MENU
+
+1. Download image to flash
+2. Select image to boot
+3. Display all files in flash
+4. Delete file from flash
+5. Restore to factory default configuration
+6. Enter BootRom upgrade menu
+7. Skip current system configuration
+8. Set switch startup mode
+0. Reboot
+Ctrl+Z: Access EXTENDED ASSISTANT MENU
+Ctrl+F: Format file system
+Ctrl+P: Change authentication for console login
+Ctrl+R: Download image to SDRAM and run
+Ctrl+C: Display Copyright
+
+Enter your choice(0-8): [SYSTEM] Workflow completed successfully
+
+=================================================
+Workflow Ended: 2026-01-13 09:22:16
+Status: SUCCESS
+=================================================

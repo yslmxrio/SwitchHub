@@ -1,0 +1,111 @@
+=================================================
+SwitchHub Workflow Log
+=================================================
+Port:      COM5
+Asset ID:  (not set)
+Workflow:  Dell PowerConnect 5548P Factory Reset Template
+Started:   2026-01-02 12:11:36
+=================================================
+
+[SYSTEM] Workflow 'Dell PowerConnect 5548P Factory Reset Template' started on COM5 @ 9600 baud
+
+Boot1 Checksum Test...............................PASS
+
+Boot2 Checksum Test...............................PASS
+
+Flash Image Validation Test.......................PASS
+
+
+
+BOOT Software Version 1.0.0.14 Built  02-Apr-2012  18:41:25
+
+                          ##                                   
+ ###########            #####        ######        ######      
+ ##############       #########      ######        ######      
+ ###############     #########       ######        ######      
+ ################  ########## ####   ######        ######      
+ ################ #########  ######  ######        ######      
+ ########################  ######### ######        ######      
+ ######   ##############  ########  #######        ######      
+ ######    ###################### #########        ######      
+ ######    ####################  ##########        ######      
+ ######    ###################  ###########        ######      
+ ######    ################## #############        ######      
+ ######   #################################        ######      
+ ################################################# ############
+ ################  ################  ############# ############
+ ################   ##############   ############# ############
+ ###############      ##########     ############# ############
+ ##############        ########      ############# ############
+ ###########             ####        ############# ############
+                          ##                                   
+
+
+PowerConnect 5548P device with Marvell ARM CPU core. 256 MByte SDRAM. 
+I-Cache 16 KB. D-Cache 16 KB. L2 Cache 256 KB. Cache Enabled.
+
+
+MAC Address   :  f8:b1:56:39:95:71.
+
+Autoboot in 2 seconds - press RETURN or Esc. to abort and enter prom.
+[TX-RAW] 
+[2J
+     Startup Menu
+
+[1]  Download Software
+[2]  Erase Flash File
+[3]  Password Recovery Procedure
+[4]  Set Terminal Baud-Rate
+[5]  Stack menu
+[6]  Back
+ Enter your choice or press 'ESC' to exit: [TX-RAW] 2
+
+Warning! About to erase a Flash file.
+
+Are you sure (Y/N) ? [TX-RAW] y
+y
+Write Flash file name (Up to 8 characters, Enter for none.):[TX] startup-config
+startup-config
+File startup-config (if present) will be erased after system initialization.
+
+==== Press Enter To Continue ====
+[TX] 
+[2J
+     Startup Menu
+
+[1]  Download Software
+[2]  Erase Flash File
+[3]  Password Recovery Procedure
+[4]  Set Terminal Baud-Rate
+[5]  Stack menu
+[6]  Back
+ Enter your choice or press 'ESC' to exit: [2J
+
+Exit from boot menu. Continue with flow.
+Preparing to decompress... 
+ 0%[TX-RAW] 2
+ 50% 100%
+Decompressing SW from image-1
+   0%   1%   2%   3%   4%   5%   6%   7%   8%   9%  10%  11%  12%  13%  14%  15%  16%  17%  18%  19%  20%  21%  22%  23%  24%  25%  26%  27%  28%  29%  30%  31%  32%  33%  34%  35%  36%  37%  38%  39%  40%  41%  42%  43%  44%  45%  46%  47%  48%  49%  50%  51%  52%  53%  54%  55%  56%  57%  58%  59%  60%  61%  62%  63%  64%  65%  66%  67%  68%  69%  70%  71%  72%  73%  74%  75%  76%  77%  78%  79%  80%  81%  82%  83%  84%  85%  86%  87%  88%  89%  90%  91%  92%  93%  94%  95% 100%
+
+OK
+Running from RAM...
+
+*********************************************************************
+*** Running  SW  Ver. 4.1.0.12  Date  22-Jul-2013  Time  16:32:43 ***
+*********************************************************************
+
+HW version is 00.00.02
+Base Mac address is: f8:b1:56:39:95:71
+Dram size is  : 256M bytes
+Dram first block size is  : 229376K bytes
+Dram first PTR is  : 0x1C00000
+Dram second block size is  : 4096K bytes
+Dram second PTR is  : 0xFC00000
+Flash size is: 16M
+[SYSTEM] Workflow interrupted by user
+
+=================================================
+Workflow Ended: 2026-01-02 12:11:54
+Status: INTERRUPTED BY USER
+=================================================

@@ -1,0 +1,43 @@
+=================================================
+SwitchHub Workflow Log
+=================================================
+Port:      COM8
+Asset ID:  (not set)
+Workflow:  Manual Override
+Started:   2026-01-08 13:33:35
+=================================================
+
+[SYSTEM] Workflow 'Manual Override' started on COM8 @ 9600 baud
+[TX] ?
+?
+User view commands:
+  archive             Archive configuration
+  backup              Backup the startup configuration file to a TFTP server
+  boot-loader         Software image file management
+  bootrom             Update/read/backup/restore bootrom
+  cd                  Change current directory
+  cfd                 Connectivity Fault Detection (CFD) module
+  clock               Specify the system clock
+  copy                Copy a file
+  debugging           Enable system debugging functions
+  delete              Delete a file
+  diagnostic-logfile  Diagnostic log file configuration
+  dir                 Display files and directories on the storage media
+  display             Display current system information
+  exception           Exception information configuration
+  fdisk               Partition a storage medium
+  fixdisk             Check and repair a storage medium
+  format              Format a storage medium
+  free                Release a connection
+  ftp                 Open an FTP connection
+  gunzip              Decompress file
+  gzip                Compress file
+  install             Perform package management operation
+  ip                  Specify IP configuration
+---- More ----                 lock                Lock the current line
+---- More ----[SYSTEM] Workflow completed successfully
+
+=================================================
+Workflow Ended: 2026-01-08 13:33:37
+Status: SUCCESS
+=================================================

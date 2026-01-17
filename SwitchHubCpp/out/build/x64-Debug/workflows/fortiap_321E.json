@@ -1,0 +1,77 @@
+{
+  "name": "FortiAP 321E",
+  "description": "Full destructive reset.",
+  "steps": [
+    {
+      "name": "Waiting for RESET BUTTON press",
+      "status": "Waiting for user (Press and Hold RESET button for min. 15 Seconds!!!)",
+      "require_physical_interact": true,
+      "command": null,
+      "expect": "RESET BUTTON PUSH EVENT DETECTED",
+      "timeout": 360
+    },
+    {
+      "name": "RESET button Event",
+      "status": "RESET Event executing...",
+      "command": null,
+      "expect": "login:",
+      "timeout": 120
+    },
+    {
+      "name": "Enter USER",
+      "status": "Entering USER..",
+      "command": "admin",
+      "expect": "Password:",
+      "timeout": 120
+    },
+    {
+      "name": "Initializing admin creds",
+      "status": "Initializing Admin credentials",
+      "command": "admin",
+      "expect": "Confirm new password:",
+      "timeout": 30
+    },
+    {
+      "name": "Confirm new password",
+      "status": "Confirming new admin password",
+      "command": "admin",
+      "expect": "321E # ",
+      "timeout": 30
+    },
+    {
+      "name": "Erase config",
+      "status": "Erasing config",
+      "command": "cfg -x",
+      "expect": "New hostname is set!",
+      "timeout": 10
+    },
+    {
+      "name": "Push default config",
+      "status": "Pushing default config values..",
+      "command": "cfg -c",
+      "expect": "321E # ",
+      "timeout": 10
+    },
+    {
+      "name": "Run factoryreset",
+      "status": "Executing 'factoryreset' command ...",
+      "command": "factoryreset",
+      "expect": "(y/n)",
+      "timeout": 10
+    },
+    {
+      "name": "Confirming factoryreset",
+      "status": "Confirming factoryreset",
+      "command": "y",
+      "expect": "reboot: Restarting system",
+      "timeout": 10
+    },
+    {
+      "name": "Workflow Complete",
+      "status": "Successfully Finished",
+      "command": null,
+      "expect": null,
+      "timeout": 0
+    }
+  ]
+}

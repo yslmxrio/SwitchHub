@@ -1,0 +1,14 @@
+{
+  "name": "Dell PowerConnect 5548P Factory Reset Template",
+  "description": "",
+  "auto_detect_baud": false,
+  "steps": [
+    {
+      "name": "Pre-Boot",
+      "status_text": "Interrupting Autoboot",
+      "interrupt": "\u001b",
+      "expect": "Startup Menu",
+      "timeout": 150,
+    }
+  ]
+}

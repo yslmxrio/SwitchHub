@@ -1,0 +1,49 @@
+{
+  "name": "HP Aruba 2930F",
+  "description": "Destructive factory-reset.",
+  "steps": [
+    {
+      "name": "Stop autoboot",
+      "status": "Stopping autoboot",
+      "command": null,
+      "expect": "Select profile",
+      "timeout": 150
+    },
+    {
+      "name": "",
+      "status": "Initializing Erasure...",
+      "command": "erase-all zeroize",
+      "expect": "Continue (y/n)?",
+      "timeout": 60
+    },
+    {
+      "name": "Confirm continue prompt",
+      "status": "Confirm continue prompt",
+      "command": "y",
+      "expect": "Zeroization",
+      "timeout": 60
+    },
+    {
+      "name": "RFD",
+      "status": "Resetting to factory defaults",
+      "command": "factory_reset",
+      "expect": "apboot>",
+      "timeout": 60
+    },
+    {
+      "name": "Reset",
+      "status": "Finalizing Reset..",
+      "command": "reset",
+      "expect": "APBoot",
+      "timeout": 60
+    },
+    {
+      "name": "Workflow Complete",
+      "status": "Successfully Finished",
+      "command": null,
+      "expect": null,
+      "timeout": 0,
+      "complete": true
+    }
+  ]
+}

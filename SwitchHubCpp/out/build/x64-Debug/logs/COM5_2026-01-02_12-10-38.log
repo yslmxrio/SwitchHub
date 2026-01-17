@@ -1,0 +1,32 @@
+=================================================
+SwitchHub Workflow Log
+=================================================
+Port:      COM5
+Asset ID:  (not set)
+Workflow:  Dell PowerConnect 5548P Factory Reset Template
+Started:   2026-01-02 12:10:38
+=================================================
+
+[SYSTEM] Workflow 'Dell PowerConnect 5548P Factory Reset Template' started on COM5 @ 9600 baud
+ress RETURN or Esc. to abort and enter prom.
+[TX-RAW] 
+[2J
+     Startup Menu
+
+[1]  Download Software
+[2]  Erase Flash File
+[3]  Password Recovery Procedure
+[4]  Set Terminal Baud-Rate
+[5]  Stack menu
+[6]  Back
+ Enter your choice or press 'ESC' to exit: [TX-RAW] 2
+
+Warning! About to erase a Flash file.
+
+Are you sure (Y/N) ? [TX-RAW] 
+[ERROR] Critical Failure: Found a closing ) with no corresponding opening parenthesis.  The error occurred while parsing the regular expression: '>>>HERE>>>):'.
+
+=================================================
+Workflow Ended: 2026-01-02 12:10:38
+Status: FAILED
+=================================================

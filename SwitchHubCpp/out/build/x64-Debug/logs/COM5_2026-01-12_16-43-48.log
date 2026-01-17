@@ -1,0 +1,20 @@
+=================================================
+SwitchHub Workflow Log
+=================================================
+Port:      COM5
+Asset ID:  (not set)
+Workflow:  Manual Command
+Started:   2026-01-12 16:43:48
+=================================================
+
+[SYSTEM] Workflow 'Manual Command' started on COM5 @ 9600 baud
+[TX] delete /force 
+delete /force 
+            ^
+ % Wrong parameter found at '^' position.
+<HPE>[SYSTEM] Workflow completed successfully
+
+=================================================
+Workflow Ended: 2026-01-12 16:43:51
+Status: SUCCESS
+=================================================

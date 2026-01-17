@@ -1,0 +1,41 @@
+=================================================
+SwitchHub Workflow Log
+=================================================
+Port:      COM8
+Asset ID:  (not set)
+Workflow:  Manual Override
+Started:   2026-01-08 13:33:44
+=================================================
+
+[SYSTEM] Workflow 'Manual Override' started on COM8 @ 9600 baud
+[TX]  
+                 logfile             Log file configuration
+  md5sum              Compute the hash digest of a file using the MD5 algorithm
+  mkdir               Create a new directory
+  monitor             System monitor
+  more                Display the contents of a file
+  move                Move a file
+  oam                 OAM module
+  ping                Ping function
+  process             Process management
+  pwd                 Display current working directory
+  python              Source using python script
+  quit                Exit from current command view
+  reboot              Reboot operation
+  rename              Rename a file or directory
+  reset               Reset operation
+  restore             Restore next startup-configuration file from TFTP server
+  rmdir               Remove an existing directory
+  save                Save current configuration
+  scheduler           Scheduler configuration 
+  scp                 Establish an SCP connection to an SCP server
+  screen-length       Multiple-screen output function
+  security-logfile    Security log file configuration
+  send                Send information to other lines
+---- More ----                 sftp                Establish an SFTP connection to an SFTP server
+---- More ----[SYSTEM] Workflow completed successfully
+
+=================================================
+Workflow Ended: 2026-01-08 13:33:47
+Status: SUCCESS
+=================================================
